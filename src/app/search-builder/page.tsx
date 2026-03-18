@@ -588,7 +588,7 @@ export default function SearchBuilderPage() {
           <div className="mt-4 pt-3 border-t border-border">
             <p className="text-[10px] text-muted-foreground leading-relaxed">
               * 교환 시 메가에너지 비용: 100→20 (일반교환), 100→10 (럭키교환)<br/>
-              * 검색어에 !traded(미교환)&!lucky(비럭키)가 자동 포함됩니다.<br/>
+              * 검색어에 !traded(미교환)&!lucky(반짝반짝 제외)가 자동 포함됩니다.<br/>
               * 친구와 서로 같은 포켓몬을 교환하면 양쪽 다 할인 혜택!
             </p>
           </div>
@@ -671,7 +671,7 @@ export default function SearchBuilderPage() {
 
           <div className="mt-4 pt-3 border-t border-border">
             <p className="text-[10px] text-muted-foreground leading-relaxed">
-              * 자동 제외: 이로치, 4성, 그림자, 코스튬, 럭키, 즐겨찾기, 다이맥스, 거다이맥스, 태그<br/>
+              * 자동 제외: 색이 다른, 4성, 그림자, 특별, 반짝반짝, 즐겨찾기, 다이맥스, 거다이 맥스, 태그<br/>
               * 개별 포켓몬 클릭 시 검색어에 추가됩니다.
             </p>
           </div>
@@ -884,8 +884,8 @@ export default function SearchBuilderPage() {
             { label: '전설+환상', query: 'legendary,mythical' },
             { label: '그림자 3성↑', query: 'shadow&3*,shadow&4*' },
             { label: '교환진화', query: 'tradeevolve&!traded' },
-            { label: '럭키 4성', query: 'lucky&4*' },
-            { label: '코스튬 이로치', query: 'costume&shiny' },
+            { label: '반짝반짝 4성', query: 'lucky&4*' },
+            { label: '특별 이로치', query: 'costume&shiny' },
             { label: '오늘 포획', query: 'age0' },
             { label: '1주일 이내', query: 'age-7' },
             { label: 'PVP 그레이트', query: 'cp-1500&3*,cp-1500&4*' },

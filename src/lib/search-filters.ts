@@ -243,7 +243,7 @@ export const searchFilters: SearchFilterCategory[] = [
   {
     id: "dynamax",
     name: "Dynamax / Gigantamax",
-    nameKo: "다이맥스 / 거다이맥스",
+    nameKo: "다이맥스 / 거다이 맥스",
     description: "Filter by Dynamax and Gigantamax status.",
     items: [
       { value: "dynamax", label: "다이맥스 가능", description: "Can Dynamax" },
@@ -526,10 +526,10 @@ export const searchFilters: SearchFilterCategory[] = [
  * --- 특수 ---
  * evolve=진화, evolvenew=미등록, item=도구, tradeevolve=교환진화,
  * megaevolve=메가진화, favorite=즐겨찾기, defender=방어포켓몬,
- * shiny=색이다른/반짝반짝, shadow=그림자, purified=정화,
- * legendary=전설의포켓몬, mythical=환상, lucky=럭키,
- * traded=교환, hatched=부화, eggsonly=알, costume=코스튬,
- * hypertraining=대단한특훈, dynamax=다이맥스, gigantamax=거다이맥스,
+ * shiny=색이 다른, shadow=그림자, purified=정화,
+ * legendary=전설의 포켓몬, mythical=환상, lucky=반짝반짝,
+ * traded=교환, hatched=부화, eggsonly=알, costume=특별, nocostume=!특별,
+ * hypertraining=대단한특훈, dynamax=다이맥스, gigantamax=거다이 맥스,
  * fusion=합체, ultrabeast=울트라비스트, background=배경,
  * adventureeffect=어드벤처이펙트
  *
