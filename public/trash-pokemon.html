@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>잡몬 정리 목록</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 16px; max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 20px; margin-bottom: 4px; color: #f8fafc; }
+  .subtitle { font-size: 12px; color: #94a3b8; margin-bottom: 20px; }
+  .category { margin-bottom: 20px; }
+  .category-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; padding: 8px 12px; background: #1e293b; border-radius: 10px; border: 1px solid #334155; }
+  .category-header h2 { font-size: 14px; color: #f1f5f9; }
+  .category-header .count { font-size: 11px; color: #64748b; margin-left: auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 6px; }
+  .card { display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; transition: border-color 0.2s; }
+  .card:hover { border-color: #475569; }
+  .no { font-size: 10px; color: #64748b; font-family: monospace; min-width: 32px; }
+  .names { overflow: hidden; }
+  .name-ko { font-size: 12px; font-weight: 600; color: #e2e8f0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .name-en { font-size: 10px; color: #64748b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .total { text-align: center; margin-top: 24px; padding: 12px; background: #1e293b; border-radius: 10px; border: 1px solid #334155; }
+  .total span { font-size: 20px; font-weight: 700; color: #ef4444; }
+  .total p { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+  .note { margin-top: 16px; padding: 10px 12px; background: #1e293b; border-radius: 8px; border-left: 3px solid #f59e0b; }
+  .note p { font-size: 11px; color: #94a3b8; line-height: 1.6; }
+  .note strong { color: #fbbf24; }
+</style>
+</head>
+<body>
+
+<h1>잡몬 정리 목록</h1>
+<p class="subtitle">배틀/레이드에서 쓸모없는 포켓몬 (메가진화 가능 포켓몬 제외)</p>
+
+<div class="category">
+  <div class="category-header">
+    <h2>노말 잡몬</h2>
+    <span class="count">38종</span>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="no">#019</span><div class="names"><div class="name-ko">꼬렛</div><div class="name-en">Rattata</div></div></div>
+    <div class="card"><span class="no">#020</span><div class="names"><div class="name-ko">레트라</div><div class="name-en">Raticate</div></div></div>
+    <div class="card"><span class="no">#021</span><div class="names"><div class="name-ko">깨비참</div><div class="name-en">Spearow</div></div></div>
+    <div class="card"><span class="no">#022</span><div class="names"><div class="name-ko">깨비드릴조</div><div class="name-en">Fearow</div></div></div>
+    <div class="card"><span class="no">#039</span><div class="names"><div class="name-ko">푸린</div><div class="name-en">Jigglypuff</div></div></div>
+    <div class="card"><span class="no">#040</span><div class="names"><div class="name-ko">푸크린</div><div class="name-en">Wigglytuff</div></div></div>
+    <div class="card"><span class="no">#052</span><div class="names"><div class="name-ko">나옹</div><div class="name-en">Meowth</div></div></div>
+    <div class="card"><span class="no">#053</span><div class="names"><div class="name-ko">페르시온</div><div class="name-en">Persian</div></div></div>
+    <div class="card"><span class="no">#083</span><div class="names"><div class="name-ko">파오리</div><div class="name-en">Farfetch'd</div></div></div>
+    <div class="card"><span class="no">#108</span><div class="names"><div class="name-ko">내루미</div><div class="name-en">Lickitung</div></div></div>
+    <div class="card"><span class="no">#132</span><div class="names"><div class="name-ko">메타몽</div><div class="name-en">Ditto</div></div></div>
+    <div class="card"><span class="no">#161</span><div class="names"><div class="name-ko">꼬리선</div><div class="name-en">Sentret</div></div></div>
+    <div class="card"><span class="no">#162</span><div class="names"><div class="name-ko">다꼬리</div><div class="name-en">Furret</div></div></div>
+    <div class="card"><span class="no">#163</span><div class="names"><div class="name-ko">부우부</div><div class="name-en">Hoothoot</div></div></div>
+    <div class="card"><span class="no">#164</span><div class="names"><div class="name-ko">야부엉</div><div class="name-en">Noctowl</div></div></div>
+    <div class="card"><span class="no">#190</span><div class="names"><div class="name-ko">에이팜</div><div class="name-en">Aipom</div></div></div>
+    <div class="card"><span class="no">#203</span><div class="names"><div class="name-ko">키링키</div><div class="name-en">Girafarig</div></div></div>
+    <div class="card"><span class="no">#234</span><div class="names"><div class="name-ko">노라키</div><div class="name-en">Stantler</div></div></div>
+    <div class="card"><span class="no">#263</span><div class="names"><div class="name-ko">지그제구리</div><div class="name-en">Zigzagoon</div></div></div>
+    <div class="card"><span class="no">#264</span><div class="names"><div class="name-ko">직구리</div><div class="name-en">Linoone</div></div></div>
+    <div class="card"><span class="no">#276</span><div class="names"><div class="name-ko">테일로</div><div class="name-en">Taillow</div></div></div>
+    <div class="card"><span class="no">#277</span><div class="names"><div class="name-ko">스왈로</div><div class="name-en">Swellow</div></div></div>
+    <div class="card"><span class="no">#300</span><div class="names"><div class="name-ko">에나비</div><div class="name-en">Skitty</div></div></div>
+    <div class="card"><span class="no">#301</span><div class="names"><div class="name-ko">델케티</div><div class="name-en">Delcatty</div></div></div>
+    <div class="card"><span class="no">#327</span><div class="names"><div class="name-ko">얼루기</div><div class="name-en">Spinda</div></div></div>
+    <div class="card"><span class="no">#399</span><div class="names"><div class="name-ko">비버니</div><div class="name-en">Bidoof</div></div></div>
+    <div class="card"><span class="no">#400</span><div class="names"><div class="name-ko">비다릴</div><div class="name-en">Bibarel</div></div></div>
+    <div class="card"><span class="no">#424</span><div class="names"><div class="name-ko">겟핸보숭</div><div class="name-en">Ambipom</div></div></div>
+    <div class="card"><span class="no">#431</span><div class="names"><div class="name-ko">나비</div><div class="name-en">Glameow</div></div></div>
+    <div class="card"><span class="no">#432</span><div class="names"><div class="name-ko">몬냥이</div><div class="name-en">Purugly</div></div></div>
+    <div class="card"><span class="no">#504</span><div class="names"><div class="name-ko">보르쥐</div><div class="name-en">Patrat</div></div></div>
+    <div class="card"><span class="no">#505</span><div class="names"><div class="name-ko">보르그</div><div class="name-en">Watchog</div></div></div>
+    <div class="card"><span class="no">#506</span><div class="names"><div class="name-ko">요테리</div><div class="name-en">Lillipup</div></div></div>
+    <div class="card"><span class="no">#507</span><div class="names"><div class="name-ko">하데리어</div><div class="name-en">Herdier</div></div></div>
+    <div class="card"><span class="no">#519</span><div class="names"><div class="name-ko">콩둘기</div><div class="name-en">Pidove</div></div></div>
+    <div class="card"><span class="no">#520</span><div class="names"><div class="name-ko">유토브</div><div class="name-en">Tranquill</div></div></div>
+    <div class="card"><span class="no">#572</span><div class="names"><div class="name-ko">치라미</div><div class="name-en">Minccino</div></div></div>
+    <div class="card"><span class="no">#573</span><div class="names"><div class="name-ko">치라치노</div><div class="name-en">Cinccino</div></div></div>
+    <div class="card"><span class="no">#659</span><div class="names"><div class="name-ko">파르빗</div><div class="name-en">Bunnelby</div></div></div>
+    <div class="card"><span class="no">#660</span><div class="names"><div class="name-ko">파르토</div><div class="name-en">Diggersby</div></div></div>
+    <div class="card"><span class="no">#676</span><div class="names"><div class="name-ko">트리미앙</div><div class="name-en">Furfrou</div></div></div>
+    <div class="card"><span class="no">#731</span><div class="names"><div class="name-ko">콕코구리</div><div class="name-en">Pikipek</div></div></div>
+    <div class="card"><span class="no">#732</span><div class="names"><div class="name-ko">크라파</div><div class="name-en">Trumbeak</div></div></div>
+    <div class="card"><span class="no">#819</span><div class="names"><div class="name-ko">탐스럽미</div><div class="name-en">Skwovet</div></div></div>
+    <div class="card"><span class="no">#820</span><div class="names"><div class="name-ko">욕심보보</div><div class="name-en">Greedent</div></div></div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-header">
+    <h2>벌레 잡몬</h2>
+    <span class="count">25종</span>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="no">#010</span><div class="names"><div class="name-ko">캐터피</div><div class="name-en">Caterpie</div></div></div>
+    <div class="card"><span class="no">#011</span><div class="names"><div class="name-ko">단데기</div><div class="name-en">Metapod</div></div></div>
+    <div class="card"><span class="no">#012</span><div class="names"><div class="name-ko">버터플</div><div class="name-en">Butterfree</div></div></div>
+    <div class="card"><span class="no">#046</span><div class="names"><div class="name-ko">파라스</div><div class="name-en">Paras</div></div></div>
+    <div class="card"><span class="no">#047</span><div class="names"><div class="name-ko">파라섹트</div><div class="name-en">Parasect</div></div></div>
+    <div class="card"><span class="no">#048</span><div class="names"><div class="name-ko">콘팡</div><div class="name-en">Venonat</div></div></div>
+    <div class="card"><span class="no">#049</span><div class="names"><div class="name-ko">도나리</div><div class="name-en">Venomoth</div></div></div>
+    <div class="card"><span class="no">#165</span><div class="names"><div class="name-ko">레디바</div><div class="name-en">Ledyba</div></div></div>
+    <div class="card"><span class="no">#166</span><div class="names"><div class="name-ko">레디안</div><div class="name-en">Ledian</div></div></div>
+    <div class="card"><span class="no">#167</span><div class="names"><div class="name-ko">페이검</div><div class="name-en">Spinarak</div></div></div>
+    <div class="card"><span class="no">#168</span><div class="names"><div class="name-ko">아리아도스</div><div class="name-en">Ariados</div></div></div>
+    <div class="card"><span class="no">#265</span><div class="names"><div class="name-ko">개무소</div><div class="name-en">Wurmple</div></div></div>
+    <div class="card"><span class="no">#266</span><div class="names"><div class="name-ko">실쿤</div><div class="name-en">Silcoon</div></div></div>
+    <div class="card"><span class="no">#267</span><div class="names"><div class="name-ko">뷰티플라이</div><div class="name-en">Beautifly</div></div></div>
+    <div class="card"><span class="no">#268</span><div class="names"><div class="name-ko">카스쿤</div><div class="name-en">Cascoon</div></div></div>
+    <div class="card"><span class="no">#269</span><div class="names"><div class="name-ko">독케일</div><div class="name-en">Dustox</div></div></div>
+    <div class="card"><span class="no">#290</span><div class="names"><div class="name-ko">토중몬</div><div class="name-en">Nincada</div></div></div>
+    <div class="card"><span class="no">#291</span><div class="names"><div class="name-ko">아이스크</div><div class="name-en">Ninjask</div></div></div>
+    <div class="card"><span class="no">#313</span><div class="names"><div class="name-ko">볼비트</div><div class="name-en">Volbeat</div></div></div>
+    <div class="card"><span class="no">#314</span><div class="names"><div class="name-ko">네오비트</div><div class="name-en">Illumise</div></div></div>
+    <div class="card"><span class="no">#401</span><div class="names"><div class="name-ko">귀뚤뚜기</div><div class="name-en">Kricketot</div></div></div>
+    <div class="card"><span class="no">#402</span><div class="names"><div class="name-ko">귀뚤톡크</div><div class="name-en">Kricketune</div></div></div>
+    <div class="card"><span class="no">#415</span><div class="names"><div class="name-ko">세꿀버리</div><div class="name-en">Combee</div></div></div>
+    <div class="card"><span class="no">#540</span><div class="names"><div class="name-ko">두르보</div><div class="name-en">Sewaddle</div></div></div>
+    <div class="card"><span class="no">#541</span><div class="names"><div class="name-ko">두르쿤</div><div class="name-en">Swadloon</div></div></div>
+    <div class="card"><span class="no">#542</span><div class="names"><div class="name-ko">모아머</div><div class="name-en">Leavanny</div></div></div>
+    <div class="card"><span class="no">#664</span><div class="names"><div class="name-ko">분이벌레</div><div class="name-en">Scatterbug</div></div></div>
+    <div class="card"><span class="no">#665</span><div class="names"><div class="name-ko">분떠도리</div><div class="name-en">Spewpa</div></div></div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-header">
+    <h2>풀 잡몬</h2>
+    <span class="count">15종</span>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="no">#043</span><div class="names"><div class="name-ko">뚜벅쵸</div><div class="name-en">Oddish</div></div></div>
+    <div class="card"><span class="no">#044</span><div class="names"><div class="name-ko">냄새꼬</div><div class="name-en">Gloom</div></div></div>
+    <div class="card"><span class="no">#114</span><div class="names"><div class="name-ko">덩쿠리</div><div class="name-en">Tangela</div></div></div>
+    <div class="card"><span class="no">#187</span><div class="names"><div class="name-ko">통통코</div><div class="name-en">Hoppip</div></div></div>
+    <div class="card"><span class="no">#188</span><div class="names"><div class="name-ko">두코</div><div class="name-en">Skiploom</div></div></div>
+    <div class="card"><span class="no">#189</span><div class="names"><div class="name-ko">솜솜코</div><div class="name-en">Jumpluff</div></div></div>
+    <div class="card"><span class="no">#191</span><div class="names"><div class="name-ko">해너츠</div><div class="name-en">Sunkern</div></div></div>
+    <div class="card"><span class="no">#192</span><div class="names"><div class="name-ko">해루미</div><div class="name-en">Sunflora</div></div></div>
+    <div class="card"><span class="no">#285</span><div class="names"><div class="name-ko">버섯꼬</div><div class="name-en">Shroomish</div></div></div>
+    <div class="card"><span class="no">#315</span><div class="names"><div class="name-ko">로젤리아</div><div class="name-en">Roselia</div></div></div>
+    <div class="card"><span class="no">#420</span><div class="names"><div class="name-ko">체리버</div><div class="name-en">Cherubi</div></div></div>
+    <div class="card"><span class="no">#421</span><div class="names"><div class="name-ko">체리꼬</div><div class="name-en">Cherrim</div></div></div>
+    <div class="card"><span class="no">#546</span><div class="names"><div class="name-ko">목화몽</div><div class="name-en">Cottonee</div></div></div>
+    <div class="card"><span class="no">#547</span><div class="names"><div class="name-ko">엘풍</div><div class="name-en">Whimsicott</div></div></div>
+    <div class="card"><span class="no">#548</span><div class="names"><div class="name-ko">치릴리</div><div class="name-en">Petilil</div></div></div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-header">
+    <h2>물 잡몬</h2>
+    <span class="count">24종</span>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="no">#054</span><div class="names"><div class="name-ko">고라파덕</div><div class="name-en">Psyduck</div></div></div>
+    <div class="card"><span class="no">#055</span><div class="names"><div class="name-ko">골덕</div><div class="name-en">Golduck</div></div></div>
+    <div class="card"><span class="no">#060</span><div class="names"><div class="name-ko">발챙이</div><div class="name-en">Poliwag</div></div></div>
+    <div class="card"><span class="no">#072</span><div class="names"><div class="name-ko">왕눈해</div><div class="name-en">Tentacool</div></div></div>
+    <div class="card"><span class="no">#073</span><div class="names"><div class="name-ko">독파리</div><div class="name-en">Tentacruel</div></div></div>
+    <div class="card"><span class="no">#086</span><div class="names"><div class="name-ko">쥬쥬</div><div class="name-en">Seel</div></div></div>
+    <div class="card"><span class="no">#087</span><div class="names"><div class="name-ko">쥬레곤</div><div class="name-en">Dewgong</div></div></div>
+    <div class="card"><span class="no">#090</span><div class="names"><div class="name-ko">셀러</div><div class="name-en">Shellder</div></div></div>
+    <div class="card"><span class="no">#098</span><div class="names"><div class="name-ko">크랩</div><div class="name-en">Krabby</div></div></div>
+    <div class="card"><span class="no">#099</span><div class="names"><div class="name-ko">킹크랩</div><div class="name-en">Kingler</div></div></div>
+    <div class="card"><span class="no">#116</span><div class="names"><div class="name-ko">쏘드라</div><div class="name-en">Horsea</div></div></div>
+    <div class="card"><span class="no">#118</span><div class="names"><div class="name-ko">콘치</div><div class="name-en">Goldeen</div></div></div>
+    <div class="card"><span class="no">#119</span><div class="names"><div class="name-ko">왕콘치</div><div class="name-en">Seaking</div></div></div>
+    <div class="card"><span class="no">#170</span><div class="names"><div class="name-ko">초라기</div><div class="name-en">Chinchou</div></div></div>
+    <div class="card"><span class="no">#171</span><div class="names"><div class="name-ko">랜턴</div><div class="name-en">Lanturn</div></div></div>
+    <div class="card"><span class="no">#183</span><div class="names"><div class="name-ko">마릴</div><div class="name-en">Marill</div></div></div>
+    <div class="card"><span class="no">#211</span><div class="names"><div class="name-ko">침바루</div><div class="name-en">Qwilfish</div></div></div>
+    <div class="card"><span class="no">#223</span><div class="names"><div class="name-ko">총어</div><div class="name-en">Remoraid</div></div></div>
+    <div class="card"><span class="no">#224</span><div class="names"><div class="name-ko">대포무노</div><div class="name-en">Octillery</div></div></div>
+    <div class="card"><span class="no">#320</span><div class="names"><div class="name-ko">고래왕자</div><div class="name-en">Wailmer</div></div></div>
+    <div class="card"><span class="no">#339</span><div class="names"><div class="name-ko">미꾸리</div><div class="name-en">Barboach</div></div></div>
+    <div class="card"><span class="no">#340</span><div class="names"><div class="name-ko">메깅</div><div class="name-en">Whiscash</div></div></div>
+    <div class="card"><span class="no">#341</span><div class="names"><div class="name-ko">가재군</div><div class="name-en">Corphish</div></div></div>
+    <div class="card"><span class="no">#370</span><div class="names"><div class="name-ko">사랑동이</div><div class="name-en">Luvdisc</div></div></div>
+    <div class="card"><span class="no">#535</span><div class="names"><div class="name-ko">동챙이</div><div class="name-en">Tympole</div></div></div>
+  </div>
+</div>
+
+<div class="category">
+  <div class="category-header">
+    <h2>기타 잡몬</h2>
+    <span class="count">38종</span>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="no">#023</span><div class="names"><div class="name-ko">아보</div><div class="name-en">Ekans</div></div></div>
+    <div class="card"><span class="no">#024</span><div class="names"><div class="name-ko">아보크</div><div class="name-en">Arbok</div></div></div>
+    <div class="card"><span class="no">#027</span><div class="names"><div class="name-ko">모래두지</div><div class="name-en">Sandshrew</div></div></div>
+    <div class="card"><span class="no">#041</span><div class="names"><div class="name-ko">주뱃</div><div class="name-en">Zubat</div></div></div>
+    <div class="card"><span class="no">#042</span><div class="names"><div class="name-ko">골뱃</div><div class="name-en">Golbat</div></div></div>
+    <div class="card"><span class="no">#056</span><div class="names"><div class="name-ko">망키</div><div class="name-en">Mankey</div></div></div>
+    <div class="card"><span class="no">#074</span><div class="names"><div class="name-ko">꼬마돌</div><div class="name-en">Geodude</div></div></div>
+    <div class="card"><span class="no">#084</span><div class="names"><div class="name-ko">두두</div><div class="name-en">Doduo</div></div></div>
+    <div class="card"><span class="no">#085</span><div class="names"><div class="name-ko">두트리오</div><div class="name-en">Dodrio</div></div></div>
+    <div class="card"><span class="no">#088</span><div class="names"><div class="name-ko">질퍽이</div><div class="name-en">Grimer</div></div></div>
+    <div class="card"><span class="no">#096</span><div class="names"><div class="name-ko">슬리프</div><div class="name-en">Drowzee</div></div></div>
+    <div class="card"><span class="no">#097</span><div class="names"><div class="name-ko">슬리퍼</div><div class="name-en">Hypno</div></div></div>
+    <div class="card"><span class="no">#100</span><div class="names"><div class="name-ko">찌리리공</div><div class="name-en">Voltorb</div></div></div>
+    <div class="card"><span class="no">#109</span><div class="names"><div class="name-ko">또가스</div><div class="name-en">Koffing</div></div></div>
+    <div class="card"><span class="no">#177</span><div class="names"><div class="name-ko">네이티</div><div class="name-en">Natu</div></div></div>
+    <div class="card"><span class="no">#178</span><div class="names"><div class="name-ko">네이티오</div><div class="name-en">Xatu</div></div></div>
+    <div class="card"><span class="no">#193</span><div class="names"><div class="name-ko">왕자리</div><div class="name-en">Yanma</div></div></div>
+    <div class="card"><span class="no">#194</span><div class="names"><div class="name-ko">우파</div><div class="name-en">Wooper</div></div></div>
+    <div class="card"><span class="no">#198</span><div class="names"><div class="name-ko">니로우</div><div class="name-en">Murkrow</div></div></div>
+    <div class="card"><span class="no">#200</span><div class="names"><div class="name-ko">무우마</div><div class="name-en">Misdreavus</div></div></div>
+    <div class="card"><span class="no">#209</span><div class="names"><div class="name-ko">블루</div><div class="name-en">Snubbull</div></div></div>
+    <div class="card"><span class="no">#210</span><div class="names"><div class="name-ko">그랑블루</div><div class="name-en">Granbull</div></div></div>
+    <div class="card"><span class="no">#216</span><div class="names"><div class="name-ko">깜지곰</div><div class="name-en">Teddiursa</div></div></div>
+    <div class="card"><span class="no">#218</span><div class="names"><div class="name-ko">마그마그</div><div class="name-en">Slugma</div></div></div>
+    <div class="card"><span class="no">#219</span><div class="names"><div class="name-ko">마그카르고</div><div class="name-en">Magcargo</div></div></div>
+    <div class="card"><span class="no">#261</span><div class="names"><div class="name-ko">포챠나</div><div class="name-en">Poochyena</div></div></div>
+    <div class="card"><span class="no">#262</span><div class="names"><div class="name-ko">그라에나</div><div class="name-en">Mightyena</div></div></div>
+    <div class="card"><span class="no">#278</span><div class="names"><div class="name-ko">갈모매</div><div class="name-en">Wingull</div></div></div>
+    <div class="card"><span class="no">#279</span><div class="names"><div class="name-ko">패리퍼</div><div class="name-en">Pelipper</div></div></div>
+    <div class="card"><span class="no">#283</span><div class="names"><div class="name-ko">비구술</div><div class="name-en">Surskit</div></div></div>
+    <div class="card"><span class="no">#284</span><div class="names"><div class="name-ko">비나방</div><div class="name-en">Masquerain</div></div></div>
+    <div class="card"><span class="no">#293</span><div class="names"><div class="name-ko">소곤룡</div><div class="name-en">Whismur</div></div></div>
+    <div class="card"><span class="no">#294</span><div class="names"><div class="name-ko">노공룡</div><div class="name-en">Loudred</div></div></div>
+    <div class="card"><span class="no">#295</span><div class="names"><div class="name-ko">폭음룡</div><div class="name-en">Exploud</div></div></div>
+    <div class="card"><span class="no">#299</span><div class="names"><div class="name-ko">코코파스</div><div class="name-en">Nosepass</div></div></div>
+    <div class="card"><span class="no">#316</span><div class="names"><div class="name-ko">꿀꺽몬</div><div class="name-en">Gulpin</div></div></div>
+    <div class="card"><span class="no">#317</span><div class="names"><div class="name-ko">꿀떡몬</div><div class="name-en">Swalot</div></div></div>
+    <div class="card"><span class="no">#325</span><div class="names"><div class="name-ko">피그점프</div><div class="name-en">Spoink</div></div></div>
+    <div class="card"><span class="no">#326</span><div class="names"><div class="name-ko">피그킹</div><div class="name-en">Grumpig</div></div></div>
+    <div class="card"><span class="no">#331</span><div class="names"><div class="name-ko">선인왕</div><div class="name-en">Cacnea</div></div></div>
+    <div class="card"><span class="no">#355</span><div class="names"><div class="name-ko">해골몽</div><div class="name-en">Duskull</div></div></div>
+    <div class="card"><span class="no">#363</span><div class="names"><div class="name-ko">대굴레오</div><div class="name-en">Spheal</div></div></div>
+    <div class="card"><span class="no">#551</span><div class="names"><div class="name-ko">깜눈크</div><div class="name-en">Sandile</div></div></div>
+    <div class="card"><span class="no">#677</span><div class="names"><div class="name-ko">냐스퍼</div><div class="name-en">Espurr</div></div></div>
+  </div>
+</div>
+
+<div class="total">
+  <span>140종</span>
+  <p>잡몬 정리 대상 총 포켓몬 수</p>
+</div>
+
+<div class="note">
+  <p><strong>제외 조건:</strong> 색이다른(이로치), 그림자, 다이맥스, 거다이맥스, 배경, 코스튬, 럭키, 즐겨찾기, 4성 포켓몬은 자동 제외됩니다.</p>
+  <p><strong>참고:</strong> 메가진화 가능 포켓몬(구구, 뿔충이, 잉어킹, 별가사리, 델빌, 요가랑, 둔타, 파비코, 어둠대신, 모다피 등)은 목록에서 제외되어 있습니다.</p>
+</div>
+
+</body>
+</html>

@@ -555,8 +555,8 @@ export const KOREAN_SEARCH_TERMS: Record<string, string> = {
   kalos: '칼로스', alola: '알로라', galar: '가라르', hisui: '히스이', paldea: '팔데아',
   // 특수 분류
   legendary: '전설의포켓몬', mythical: '환상', ultrabeast: '울트라비스트',
-  shadow: '그림자', purified: '정화', shiny: '색이다른',
-  lucky: '럭키', costume: '코스튬', nocostume: '코스튬없는',
+  shadow: '그림자', purified: '정화', shiny: '색이 다른',
+  lucky: '반짝반짝', costume: '특별', nocostume: '특별없는',
   // 진화
   evolve: '진화', evolvenew: '미등록', item: '도구', tradeevolve: '교환진화',
   megaevolve: '메가진화',
@@ -565,7 +565,7 @@ export const KOREAN_SEARCH_TERMS: Record<string, string> = {
   hatched: '부화', eggsonly: '알', hypertraining: '대단한특훈',
   adventureeffect: '어드벤처이펙트',
   // 다이맥스
-  dynamax: '다이맥스', gigantamax: '거다이맥스',
+  dynamax: '다이맥스', gigantamax: '거다이 맥스',
   maxmove: '다이맥스기술', maxguard: '맥스가드', maxspirit: '맥스스피릿',
   fusion: '합체',
   // 성별
