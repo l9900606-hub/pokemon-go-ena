@@ -298,6 +298,9 @@ export default function SearchBuilderPage() {
   const [copied, setCopied] = useState(false);
   const [pokedex, setPokedex] = useState<Pokemon[]>([]);
   const [dexSearch, setDexSearch] = useState('');
+  const [eventStartDate, setEventStartDate] = useState('');
+  const [eventEndDate, setEventEndDate] = useState('');
+  const [eventPokemon, setEventPokemon] = useState('');
   const [lang, setLang] = useLocalStorage<'en' | 'ko'>('pgm-search-lang', 'ko');
 
   // 언어에 따라 검색어 토큰 변환
@@ -352,7 +355,8 @@ export default function SearchBuilderPage() {
       return;
     }
     const localized = toLocal(value);
-    const token = excludeMode ? `!${localized}` : localized;
+    // 이미 !로 시작하면 (예: nocostume→!특별) excludeMode 무시
+    const token = localized.startsWith('!') ? localized : (excludeMode ? `!${localized}` : localized);
     setQuery(prev => {
       if (!prev) return token;
       const op = pendingOp || '&';
@@ -378,7 +382,10 @@ export default function SearchBuilderPage() {
 
       {/* Query display - sticky on mobile */}
       <div className="bg-card border border-border rounded-xl p-3 mb-4 sticky top-0 z-30">
-        <label className="text-xs text-muted-foreground mb-1 block">생성된 검색어</label>
+        <label className="text-xs text-muted-foreground mb-1 flex justify-between">
+          <span>생성된 검색어</span>
+          {query && <span className={query.length > 500 ? 'text-red-500' : ''}>{query.length}자</span>}
+        </label>
         <div className="flex items-center gap-1.5">
           <input
             value={query}
@@ -587,10 +594,75 @@ export default function SearchBuilderPage() {
 
           <div className="mt-4 pt-3 border-t border-border">
             <p className="text-[10px] text-muted-foreground leading-relaxed">
-              * 교환 시 메가에너지 비용: 100→20 (일반교환), 100→10 (럭키교환)<br/>
+              * 교환 시 메가에너지 비용: 100→20 (일반교환), 100→10 (반짝반짝교환)<br/>
               * 검색어에 !traded(미교환)&!lucky(반짝반짝 제외)가 자동 포함됩니다.<br/>
               * 친구와 서로 같은 포켓몬을 교환하면 양쪽 다 할인 혜택!
             </p>
+          </div>
+        </div>
+      ) : activeCategory === '_event_age' ? (
+        <div className="bg-card border border-border rounded-xl p-3">
+          <h3 className="text-sm font-bold mb-1">이벤트 기간 검색어</h3>
+          <p className="text-xs text-muted-foreground mb-3">이벤트 날짜를 입력하면 오늘 기준 age 검색어를 자동 생성합니다</p>
+
+          <div className="space-y-3">
+            <div className="flex gap-2 items-end flex-wrap">
+              <div>
+                <label className="text-[10px] text-muted-foreground block mb-1">시작일</label>
+                <input type="date" value={eventStartDate} onChange={e => setEventStartDate(e.target.value)}
+                  className="px-2 py-1.5 text-xs bg-muted border border-border rounded-lg" />
+              </div>
+              <div>
+                <label className="text-[10px] text-muted-foreground block mb-1">종료일</label>
+                <input type="date" value={eventEndDate} onChange={e => setEventEndDate(e.target.value)}
+                  className="px-2 py-1.5 text-xs bg-muted border border-border rounded-lg" />
+              </div>
+            </div>
+
+            {eventStartDate && eventEndDate && (() => {
+              const today = new Date();
+              today.setHours(0, 0, 0, 0);
+              const start = new Date(eventStartDate);
+              const end = new Date(eventEndDate);
+              const ageEnd = Math.floor((today.getTime() - start.getTime()) / 86400000);
+              const ageStart = Math.floor((today.getTime() - end.getTime()) / 86400000);
+              if (ageStart < 0 || ageEnd < 0) return <p className="text-xs text-red-500">미래 날짜는 검색할 수 없습니다</p>;
+              return (
+                <div className="bg-muted/50 rounded-lg p-3">
+                  <p className="text-xs mb-2">
+                    오늘 기준: <span className="font-mono text-accent font-bold">age{ageStart}-{ageEnd}</span>
+                    <span className="text-muted-foreground ml-2">({ageStart}~{ageEnd}일 전)</span>
+                  </p>
+                  <div className="flex gap-2 flex-wrap">
+                    <button onClick={() => { setQuery(`age${ageStart}-${ageEnd}`); setPendingOp(null); }}
+                      className="px-3 py-1.5 text-xs bg-blue-500 text-white rounded-lg">기간만 검색</button>
+                    {eventPokemon.trim() && (
+                      <button onClick={() => {
+                        const names = eventPokemon.split(',').map(s => s.trim()).filter(Boolean);
+                        setQuery(names.join(',') + `&age${ageStart}-${ageEnd}`);
+                        setPendingOp(null);
+                      }}
+                        className="px-3 py-1.5 text-xs bg-green-500 text-white rounded-lg">기간 + 포켓몬 검색</button>
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
+
+            <div>
+              <label className="text-[10px] text-muted-foreground block mb-1">이벤트 포켓몬 (쉼표로 구분)</label>
+              <input type="text" value={eventPokemon} onChange={e => setEventPokemon(e.target.value)}
+                placeholder="예: 피카츄, 파이리, 꼬부기"
+                className="w-full px-3 py-2 bg-muted border border-border rounded-lg text-sm" />
+            </div>
+
+            <div className="pt-2 border-t border-border">
+              <p className="text-[10px] text-muted-foreground leading-relaxed">
+                * age0 = 오늘, age1 = 어제, age7 = 일주일 전<br/>
+                * 이벤트 포켓몬을 입력하면 해당 기간에 잡은 특정 포켓몬만 검색합니다<br/>
+                * year 검색어도 사용 가능: year2025, year2026
+              </p>
+            </div>
           </div>
         </div>
       ) : activeCategory === '_trash' ? (
@@ -814,7 +886,7 @@ export default function SearchBuilderPage() {
                         setTemplateInput({ index: i, value: '', template: item.value });
                       }
                     } else {
-                      addToken(toLocal(item.value));
+                      addToken(item.value);
                     }
                   }}
                   className={`group relative px-2.5 py-1.5 rounded-lg text-xs border transition-colors border-border hover:border-accent hover:bg-accent/10 cursor-pointer ${
@@ -844,6 +916,7 @@ export default function SearchBuilderPage() {
           { id: '_trash', icon: '⚠️', label: '잡몬정리' },
           { id: '_mega_trade', icon: '🔄', label: '메가교환' },
           { id: '_pvp', icon: '⚔️', label: '배틀' },
+          { id: '_event_age', icon: '📆', label: '이벤트검색' },
         ].map(tab => (
           <button
             key={tab.id}
