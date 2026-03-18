@@ -247,7 +247,7 @@ export const searchFilters: SearchFilterCategory[] = [
     description: "Filter by Dynamax and Gigantamax status.",
     items: [
       { value: "dynamax", label: "다이맥스 가능", description: "Can Dynamax" },
-      { value: "gigantamax", label: "거다이 맥스 가능", description: "Can Gigantamax" },
+      { value: "gigantamax", label: "거다이 맥스", description: "Can Gigantamax" },
       { value: "maxmove", label: "다이맥스 기술 보유", description: "Has a Max Move" },
       { value: "maxguard", label: "맥스가드 보유", description: "Has Max Guard" },
       { value: "maxspirit", label: "맥스 스피릿 보유", description: "Has Max Spirit" },
