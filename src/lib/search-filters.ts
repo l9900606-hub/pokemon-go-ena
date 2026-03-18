@@ -233,6 +233,7 @@ export const searchFilters: SearchFilterCategory[] = [
       { value: "shiny", label: "색이 다른 포켓몬", description: "Shiny Pokemon" },
       { value: "lucky", label: "반짝반짝 포켓몬", description: "Lucky Pokemon (from lucky trade)" },
       { value: "costume", label: "특별 포켓몬", description: "Wearing event costume" },
+      { value: "nocostume", label: "특별 없는 포켓몬 (!특별)", description: "Not wearing any costume" },
     ],
   },
 
@@ -555,7 +556,7 @@ export const KOREAN_SEARCH_TERMS: Record<string, string> = {
   // 특수 분류
   legendary: '전설의 포켓몬', mythical: '환상', ultrabeast: '울트라비스트',
   shadow: '그림자', purified: '정화', shiny: '색이 다른',
-  lucky: '반짝반짝', costume: '특별',
+  lucky: '반짝반짝', costume: '특별', nocostume: '!특별',
   // 진화
   evolve: '진화', evolvenew: '미등록', item: '도구', tradeevolve: '교환진화',
   megaevolve: '메가진화',
