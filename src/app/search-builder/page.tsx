@@ -312,9 +312,15 @@ export default function SearchBuilderPage() {
     // 연산자로 분리 → 각 토큰 변환 → 재결합
     return q.split(/([&,;:|])/).map(part => {
       const excl = part.startsWith('!');
-      const term = excl ? part.slice(1) : part;
+      const plus = part.startsWith('+');
+      const prefix = excl ? '!' : plus ? '+' : '';
+      const term = prefix ? part.slice(1) : part;
       const ko = KOREAN_SEARCH_TERMS[term];
-      if (ko) return (excl ? '!' : '') + ko;
+      if (ko) {
+        // ko가 이미 !로 시작하면 (예: nocostume→!특별) prefix 무시
+        if (ko.startsWith('!')) return ko;
+        return prefix + ko;
+      }
       return part;
     }).join('');
   }, [lang]);
@@ -883,13 +889,13 @@ export default function SearchBuilderPage() {
         <h3 className="text-sm font-bold mb-2">자주 쓰는 검색어</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1.5">
           {[
-            { label: '4성 이로치', query: '4*&shiny' },
+            { label: '4성 색이 다른', query: '4*&shiny' },
             { label: '미등록 진화', query: 'evolvenew' },
             { label: '전설+환상', query: 'legendary,mythical' },
             { label: '그림자 3성↑', query: 'shadow&3*,shadow&4*' },
             { label: '교환진화', query: 'tradeevolve&!traded' },
             { label: '반짝반짝 4성', query: 'lucky&4*' },
-            { label: '특별 이로치', query: 'costume&shiny' },
+            { label: '특별 색이 다른', query: 'costume&shiny' },
             { label: '오늘 포획', query: 'age0' },
             { label: '1주일 이내', query: 'age-7' },
             { label: 'PVP 그레이트', query: 'cp-1500&3*,cp-1500&4*' },
