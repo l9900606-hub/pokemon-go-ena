@@ -295,8 +295,6 @@ export default function SearchBuilderPage() {
   const [pendingOp, setPendingOp] = useState<string | null>(null);
   const [excludeMode, setExcludeMode] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>('types');
-  const [savedQueries, setSavedQueries] = useLocalStorage<{ name: string; query: string }[]>('pgm-saved-searches', []);
-  const [saveName, setSaveName] = useState('');
   const [copied, setCopied] = useState(false);
   const [pokedex, setPokedex] = useState<Pokemon[]>([]);
   const [dexSearch, setDexSearch] = useState('');
@@ -368,16 +366,6 @@ export default function SearchBuilderPage() {
     setTimeout(() => setCopied(false), 1500);
   };
 
-  const saveQuery = () => {
-    const name = saveName.trim() || query.slice(0, 20);
-    if (!query) return;
-    setSavedQueries(prev => [...prev.filter(q => q.name !== name), { name, query }]);
-    setSaveName('');
-  };
-
-  const deleteQuery = (name: string) => {
-    setSavedQueries(prev => prev.filter(q => q.name !== name));
-  };
 
   const activeFilters = searchFilters.find(c => c.id === activeCategory);
   const [templateInput, setTemplateInput] = useState<{ index: number; value: string; template: string } | null>(null);
@@ -883,32 +871,6 @@ export default function SearchBuilderPage() {
             {cat.nameKo}
           </button>
         ))}
-      </div>
-
-      {/* Saved queries */}
-      <div className="mt-4 bg-card border border-border rounded-xl p-3">
-        <h3 className="text-sm font-bold mb-2">저장된 검색어</h3>
-        <div className="flex gap-1.5 mb-2 flex-wrap">
-          <input value={saveName} onChange={e => setSaveName(e.target.value)} placeholder="이름"
-            className="px-2 py-1.5 text-xs bg-muted border border-border rounded w-28" />
-          <button onClick={saveQuery} disabled={!query}
-            className="px-3 py-1.5 text-xs bg-primary text-primary-foreground rounded-lg disabled:opacity-50">저장</button>
-        </div>
-        {savedQueries.length === 0 ? (
-          <p className="text-xs text-muted-foreground">저장된 검색어 없음</p>
-        ) : (
-          <div className="space-y-1">
-            {savedQueries.map((sq, i) => (
-              <div key={i} className="flex items-center gap-1.5 bg-muted/50 rounded-lg px-2 py-1.5">
-                <span className="text-[11px] font-medium min-w-[60px] truncate">{sq.name}</span>
-                <code className="flex-1 text-[11px] font-mono text-accent truncate">{sq.query}</code>
-                <button onClick={() => { setQuery(sq.query); setPendingOp(null); }} className="text-[11px] text-accent">불러오기</button>
-                <button onClick={() => navigator.clipboard.writeText(sq.query)} className="text-[11px] text-muted-foreground">복사</button>
-                <button onClick={() => deleteQuery(sq.name)} className="text-[11px] text-red-400">삭제</button>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Presets */}
