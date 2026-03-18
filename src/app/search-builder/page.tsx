@@ -294,7 +294,7 @@ export default function SearchBuilderPage() {
   const [query, setQuery] = useState('');
   const [pendingOp, setPendingOp] = useState<string | null>(null);
   const [excludeMode, setExcludeMode] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string>('types');
+  const [activeCategory, setActiveCategory] = useState<string>('_trash');
   const [copied, setCopied] = useState(false);
   const [pokedex, setPokedex] = useState<Pokemon[]>([]);
   const [dexSearch, setDexSearch] = useState('');
