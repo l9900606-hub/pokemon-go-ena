@@ -298,6 +298,8 @@ export default function SearchBuilderPage() {
   const [copied, setCopied] = useState(false);
   const [pokedex, setPokedex] = useState<Pokemon[]>([]);
   const [dexSearch, setDexSearch] = useState('');
+  const [ageStartDate, setAgeStartDate] = useState('');
+  const [ageEndDate, setAgeEndDate] = useState('');
   const [lang, setLang] = useLocalStorage<'en' | 'ko'>('pgm-search-lang', 'ko');
 
   // 언어에 따라 검색어 토큰 변환
@@ -717,6 +719,79 @@ export default function SearchBuilderPage() {
             <p className="text-xs text-muted-foreground text-center py-4">검색 결과 없음</p>
           )}
           <p className="text-xs text-muted-foreground mt-2">총 {pokedex.length}종 {dexSearch ? `(${filteredDex.length}건 일치)` : ''}</p>
+        </div>
+      ) : activeCategory === 'age' ? (
+        <div className="bg-card border border-border rounded-xl p-3">
+          <h3 className="text-sm font-bold mb-1">나이 (일수) / 날짜 검색</h3>
+          <p className="text-xs text-muted-foreground mb-3">날짜를 선택하면 오늘 기준 age 검색어를 자동 생성합니다</p>
+
+          <div className="space-y-3">
+            <div className="flex gap-2 items-end flex-wrap">
+              <div>
+                <label className="text-[10px] text-muted-foreground block mb-1">시작일</label>
+                <input type="date" value={ageStartDate} onChange={e => setAgeStartDate(e.target.value)}
+                  className="px-2 py-1.5 text-xs bg-muted border border-border rounded-lg" />
+              </div>
+              <div>
+                <label className="text-[10px] text-muted-foreground block mb-1">종료일</label>
+                <input type="date" value={ageEndDate} onChange={e => setAgeEndDate(e.target.value)}
+                  className="px-2 py-1.5 text-xs bg-muted border border-border rounded-lg" />
+              </div>
+            </div>
+
+            {ageStartDate && (() => {
+              const today = new Date();
+              today.setHours(0, 0, 0, 0);
+              const start = new Date(ageStartDate);
+              const end = ageEndDate ? new Date(ageEndDate) : start;
+              const ageFromEnd = Math.floor((today.getTime() - start.getTime()) / 86400000);
+              const ageFromStart = Math.floor((today.getTime() - end.getTime()) / 86400000);
+              if (ageFromStart < 0) return <p className="text-xs text-red-500 mt-2">미래 날짜는 검색할 수 없습니다</p>;
+              const ageQuery = ageFromStart === ageFromEnd ? `age${ageFromStart}` : `age${ageFromStart}-${ageFromEnd}`;
+              return (
+                <div className="bg-muted/50 rounded-lg p-3">
+                  <p className="text-xs mb-2">
+                    오늘 기준: <span className="font-mono text-accent font-bold">{ageQuery}</span>
+                    <span className="text-muted-foreground ml-2">
+                      ({ageFromStart === ageFromEnd ? `${ageFromStart}일 전` : `${ageFromStart}~${ageFromEnd}일 전`})
+                    </span>
+                  </p>
+                  <div className="flex gap-2 flex-wrap">
+                    <button onClick={() => { setQuery(ageQuery); setPendingOp(null); }}
+                      className="px-3 py-1.5 text-xs bg-blue-500 text-white rounded-lg">검색어 생성</button>
+                    <button onClick={() => { addToken(ageQuery); }}
+                      className="px-3 py-1.5 text-xs bg-green-500 text-white rounded-lg">기존 검색어에 추가</button>
+                  </div>
+                </div>
+              );
+            })()}
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-border">
+            <h4 className="text-xs font-bold mb-2">빠른 검색</h4>
+            <div className="flex flex-wrap gap-1.5">
+              {[
+                { label: '오늘', query: 'age0' },
+                { label: '어제', query: 'age1' },
+                { label: '최근 3일', query: 'age-3' },
+                { label: '최근 1주일', query: 'age-7' },
+                { label: '최근 2주일', query: 'age-14' },
+                { label: '최근 1개월', query: 'age-30' },
+                { label: '최근 3개월', query: 'age-90' },
+                { label: '1년 이상', query: 'age365-' },
+              ].map(p => (
+                <button key={p.label} onClick={() => { addToken(p.query); }}
+                  className="px-2.5 py-1.5 rounded-lg text-xs border border-border hover:border-accent hover:bg-accent/10">
+                  <span className="font-mono text-[11px] text-accent">{p.query}</span>
+                  <span className="ml-1.5">{p.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-[10px] text-muted-foreground mt-3">
+            * age0 = 오늘, age1 = 어제 | 범위: age0-7 (최근 1주일) | year2025 = 2025년 포획
+          </p>
         </div>
       ) : activeFilters ? (
         <div className="bg-card border border-border rounded-xl p-3">
