@@ -230,10 +230,9 @@ export const searchFilters: SearchFilterCategory[] = [
       { value: "ultrabeast", label: "울트라비스트", description: "Ultra Beast Pokemon" },
       { value: "shadow", label: "그림자 포켓몬", description: "Shadow Pokemon (from Team Rocket)" },
       { value: "purified", label: "정화된 포켓몬", description: "Purified Pokemon" },
-      { value: "shiny", label: "색이 다른 포켓몬 (반짝반짝)", description: "Shiny Pokemon" },
-      { value: "lucky", label: "럭키 포켓몬", description: "Lucky Pokemon (from lucky trade)" },
-      { value: "costume", label: "코스튬 포켓몬", description: "Wearing event costume" },
-      { value: "nocostume", label: "코스튬 없는 포켓몬", description: "Not wearing any costume" },
+      { value: "shiny", label: "색이 다른 포켓몬", description: "Shiny Pokemon" },
+      { value: "lucky", label: "반짝반짝 포켓몬", description: "Lucky Pokemon (from lucky trade)" },
+      { value: "costume", label: "특별 포켓몬", description: "Wearing event costume" },
     ],
   },
 
@@ -554,14 +553,14 @@ export const KOREAN_SEARCH_TERMS: Record<string, string> = {
   kanto: '관동', johto: '성도', hoenn: '호연', sinnoh: '신오', unova: '하나',
   kalos: '칼로스', alola: '알로라', galar: '가라르', hisui: '히스이', paldea: '팔데아',
   // 특수 분류
-  legendary: '전설의포켓몬', mythical: '환상', ultrabeast: '울트라비스트',
+  legendary: '전설의 포켓몬', mythical: '환상', ultrabeast: '울트라비스트',
   shadow: '그림자', purified: '정화', shiny: '색이 다른',
-  lucky: '반짝반짝', costume: '특별', nocostume: '특별없는',
+  lucky: '반짝반짝', costume: '특별',
   // 진화
   evolve: '진화', evolvenew: '미등록', item: '도구', tradeevolve: '교환진화',
   megaevolve: '메가진화',
   // 상태
-  favorite: '즐겨찾기', traded: '교환', defender: '방어포켓몬',
+  favorite: '즐겨찾기', traded: '교환', defender: '방어 포켓몬',
   hatched: '부화', eggsonly: '알', hypertraining: '대단한특훈',
   adventureeffect: '어드벤처이펙트',
   // 다이맥스
