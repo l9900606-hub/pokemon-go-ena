@@ -351,14 +351,15 @@ export default function SearchBuilderPage() {
       setExcludeMode(prev => !prev);
       return;
     }
-    const token = excludeMode ? `!${value}` : value;
+    const localized = toLocal(value);
+    const token = excludeMode ? `!${localized}` : localized;
     setQuery(prev => {
       if (!prev) return token;
       const op = pendingOp || '&';
       setPendingOp(null);
       return prev + op + token;
     });
-  }, [pendingOp, excludeMode]);
+  }, [pendingOp, excludeMode, toLocal]);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(query);
