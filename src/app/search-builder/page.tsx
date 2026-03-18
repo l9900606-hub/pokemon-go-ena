@@ -300,7 +300,7 @@ export default function SearchBuilderPage() {
   const [copied, setCopied] = useState(false);
   const [pokedex, setPokedex] = useState<Pokemon[]>([]);
   const [dexSearch, setDexSearch] = useState('');
-  const [lang, setLang] = useLocalStorage<'en' | 'ko'>('pgm-search-lang', 'en');
+  const [lang, setLang] = useLocalStorage<'en' | 'ko'>('pgm-search-lang', 'ko');
 
   // 언어에 따라 검색어 토큰 변환
   const toLocal = useCallback((value: string) => {
@@ -335,7 +335,7 @@ export default function SearchBuilderPage() {
   }, []);
 
   const filteredDex = useMemo(() => {
-    if (!dexSearch.trim()) return pokedex.slice(0, 50);
+    if (!dexSearch.trim()) return [];
     const q = dexSearch.trim().toLowerCase();
     return pokedex.filter(p =>
       p.name.toLowerCase().includes(q) ||
@@ -714,7 +714,7 @@ export default function SearchBuilderPage() {
           {dexSearch && filteredDex.length === 0 && (
             <p className="text-xs text-muted-foreground text-center py-4">검색 결과 없음</p>
           )}
-          <p className="text-xs text-muted-foreground mt-2">총 {pokedex.length}종 ({dexSearch ? `${filteredDex.length}건 일치` : '상위 50개 표시'})</p>
+          <p className="text-xs text-muted-foreground mt-2">총 {pokedex.length}종 {dexSearch ? `(${filteredDex.length}건 일치)` : ''}</p>
         </div>
       ) : activeFilters ? (
         <div className="bg-card border border-border rounded-xl p-3">

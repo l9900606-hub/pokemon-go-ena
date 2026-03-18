@@ -1,13 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import SyncButton from './SyncButton';
+
 
 const tabs = [
   { href: '/search-builder', label: '검색어', icon: '🔍' },
-  { href: '/manhole-map', label: '맨홀지도', icon: '🗾' },
-  { href: '/jeju-map', label: '제주지도', icon: '🗺️' },
-  { href: '/events', label: '이벤트', icon: '📅' },
+  // { href: '/manhole-map', label: '맨홀지도', icon: '🗾' },
+  // { href: '/jeju-map', label: '제주지도', icon: '🗺️' },
+  // { href: '/events', label: '이벤트', icon: '📅' },
 ];
 
 export default function Navigation() {
@@ -41,7 +41,6 @@ export default function Navigation() {
           })}
         </nav>
         <div className="border-t border-border">
-          <SyncButton />
           <ThemeToggle />
         </div>
       </aside>
