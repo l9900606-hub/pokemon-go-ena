@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>잡몬 목록 검토 (2026-03)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e0e0e0; padding: 16px; }
+  h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { font-size: 0.75rem; color: #888; margin-bottom: 20px; }
+  .stats-bar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .stat { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 10px 16px; text-align: center; min-width: 100px; }
+  .stat .num { font-size: 1.5rem; font-weight: 700; }
+  .stat .lbl { font-size: 0.7rem; color: #888; margin-top: 2px; }
+  .stat.remove .num { color: #f87171; }
+  .stat.add .num { color: #4ade80; }
+  .stat.net .num { color: #fbbf24; }
+
+  section { margin-bottom: 28px; }
+  h2 { font-size: 0.95rem; font-weight: 700; padding: 8px 12px; border-radius: 6px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  h2.remove { background: #2d1a1a; border-left: 3px solid #f87171; color: #f87171; }
+  h2.add    { background: #1a2d1a; border-left: 3px solid #4ade80; color: #4ade80; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  th { background: #1a1a1a; padding: 8px 10px; text-align: left; font-size: 0.72rem; color: #888; font-weight: 600; border-bottom: 1px solid #333; }
+  td { padding: 7px 10px; border-bottom: 1px solid #222; vertical-align: middle; }
+  tr:hover td { background: #1a1a1a; }
+
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 0.68rem; font-weight: 600; }
+  .badge.s  { background: #4c1d95; color: #c4b5fd; }
+  .badge.a  { background: #1e3a5f; color: #93c5fd; }
+  .badge.b  { background: #1a3a2a; color: #6ee7b7; }
+  .badge.sp { background: #3d2a00; color: #fbbf24; }
+  .badge.cat { background: #2a2a2a; color: #aaa; }
+
+  .no { font-family: monospace; color: #666; font-size: 0.72rem; }
+  .name-ko { font-weight: 600; }
+  .name-en { font-size: 0.7rem; color: #666; }
+  .reason { font-size: 0.73rem; color: #aaa; line-height: 1.5; }
+  .reason strong { color: #e0e0e0; }
+
+  .divider { border: none; border-top: 1px solid #2a2a2a; margin: 20px 0; }
+  .note { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 12px; font-size: 0.78rem; color: #aaa; margin-bottom: 20px; line-height: 1.6; }
+  .note strong { color: #e0e0e0; }
+  .section-wrap { overflow-x: auto; }
+
+  .confirm-area { position: sticky; bottom: 0; background: #0f0f0f; padding: 16px 0 8px; border-top: 1px solid #333; margin-top: 12px; display: flex; gap: 12px; }
+  .btn { padding: 12px 28px; border-radius: 8px; font-size: 0.9rem; font-weight: 700; cursor: pointer; border: none; }
+  .btn.confirm { background: #22c55e; color: #000; }
+  .btn.cancel  { background: #333; color: #aaa; }
+  .btn:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<h1>🗑️ 잡몬 목록 재검토</h1>
+<p class="subtitle">pvpoke.com 기준 2026년 3월 시즌26 메타 반영 · 미구현 포켓몬 제외</p>
+
+<div class="stats-bar">
+  <div class="stat"><div class="num" style="color:#aaa">134</div><div class="lbl">현재 등록</div></div>
+  <div class="stat remove"><div class="num">-11</div><div class="lbl">제거 (메타 가치)</div></div>
+  <div class="stat add"><div class="num">+18</div><div class="lbl">추가 (신규 잡몬)</div></div>
+  <div class="stat net"><div class="num">141</div><div class="lbl">변경 후 합계</div></div>
+</div>
+
+<div class="note">
+  <strong>검토 기준</strong>: 슈퍼리그(GL) / 울트라리그(UL) pvpoke.com 랭크 기준. 미구현(포켓몬 GO 미출시) 포켓몬 제외.<br>
+  <strong>제외된 항목</strong>: 찌르꼬 라인(메가 찌르호크 데이터 존재), 화살꼬빈 라인(파이어로 GL 17위), 깨물부기/갈가부기·찌로꼬치/꼬치조(미구현)
+</div>
+
+<!-- ====== REMOVE ====== -->
+<section>
+  <h2 class="remove">🚫 제거 — 현재 목록에 있으나 빼야 할 포켓몬 (11종)</h2>
+  <div class="section-wrap">
+  <table>
+    <thead><tr><th style="width:50px">번호</th><th>포켓몬</th><th style="width:100px">GL 가치</th><th>제거 이유</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="no">#132</td>
+        <td><span class="name-ko">메타몽</span><br><span class="name-en">Ditto</span></td>
+        <td><span class="badge sp">SPECIAL</span></td>
+        <td class="reason"><strong>Mew / Meltan 스페셜 리서치 필수</strong>. 야생에서 변장 출현. 절대 전송 금지</td>
+      </tr>
+      <tr>
+        <td class="no">#161</td>
+        <td><span class="name-ko">꼬리선</span><br><span class="name-en">Sentret</span></td>
+        <td rowspan="2"><span class="badge s">GL 2위</span></td>
+        <td rowspan="2" class="reason"><strong>다부니(Furret) 시즌26 슈퍼리그 전체 2위</strong>. Sucker Punch + Swift + Trailblaze. XL 캔디 대량 필요</td>
+      </tr>
+      <tr>
+        <td class="no">#162</td>
+        <td><span class="name-ko">다고리</span><br><span class="name-en">Furret</span></td>
+      </tr>
+      <tr>
+        <td class="no">#108</td>
+        <td><span class="name-ko">내루미</span><br><span class="name-en">Lickitung</span></td>
+        <td><span class="badge b">GL B+</span></td>
+        <td class="reason"><strong>내루미가(Lickilicky) GL B+티어</strong>. Body Slam + Power Whip 내구형</td>
+      </tr>
+      <tr>
+        <td class="no">#170</td>
+        <td><span class="name-ko">초라기</span><br><span class="name-en">Chinchou</span></td>
+        <td rowspan="2"><span class="badge b">GL 116위</span></td>
+        <td rowspan="2" class="reason"><strong>랜턴(Lanturn) GL 116위 B+티어</strong>. Water/Electric 내구형, Surf + Thunderbolt</td>
+      </tr>
+      <tr>
+        <td class="no">#171</td>
+        <td><span class="name-ko">랜턴</span><br><span class="name-en">Lanturn</span></td>
+      </tr>
+      <tr>
+        <td class="no">#183</td>
+        <td><span class="name-ko">마릴</span><br><span class="name-en">Marill</span></td>
+        <td><span class="badge s">GL S티어</span></td>
+        <td class="reason"><strong>마릴리(Azumarill) 슈퍼리그 S티어</strong>, 대부분 티어리스트 1~3위. XL 캔디 296개 필요</td>
+      </tr>
+      <tr>
+        <td class="no">#194</td>
+        <td><span class="name-ko">우파</span><br><span class="name-en">Wooper</span></td>
+        <td><span class="badge s">GL TOP11</span></td>
+        <td class="reason"><strong>누오 GL A+티어 109위</strong>. 팔데아 우파→<strong>클로드사이어 GL TOP11</strong>. Poison Sting + Sludge Bomb + EQ</td>
+      </tr>
+      <tr>
+        <td class="no">#198</td>
+        <td><span class="name-ko">니로우</span><br><span class="name-en">Murkrow</span></td>
+        <td><span class="badge a">GL 79위</span></td>
+        <td class="reason"><strong>니로우(Murkrow) GL 79위</strong> (상위 7%). Peck + Drill Peck + Foul Play. 그림자 버전 더 강력</td>
+      </tr>
+      <tr>
+        <td class="no">#90</td>
+        <td><span class="name-ko">셀러</span><br><span class="name-en">Shellder</span></td>
+        <td><span class="badge cat">메가 진화</span></td>
+        <td class="reason">어니부기(Blastoise) 메가 진화 라인. XL 캔디 확보 목적으로 보관 권장</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ====== ADD ====== -->
+<section>
+  <h2 class="add">✅ 추가 — 신규 잡몬 (18종)</h2>
+  <div class="section-wrap">
+  <table>
+    <thead><tr><th style="width:50px">번호</th><th>포켓몬</th><th style="width:90px">카테고리</th><th>추가 이유</th></tr></thead>
+    <tbody>
+      <!-- 노말 -->
+      <tr>
+        <td class="no">#287</td>
+        <td><span class="name-ko">게을로</span><br><span class="name-en">Slakoth</span></td>
+        <td rowspan="2"><span class="badge cat">노말 잡몬</span></td>
+        <td rowspan="2" class="reason">게을킹(Slaking) PVP 비사용. 흔한 스폰. 현재 목록 누락</td>
+      </tr>
+      <tr>
+        <td class="no">#288</td>
+        <td><span class="name-ko">발바로</span><br><span class="name-en">Vigoroth</span></td>
+      </tr>
+      <tr>
+        <td class="no">#827</td>
+        <td><span class="name-ko">훔처우</span><br><span class="name-en">Nickit</span></td>
+        <td rowspan="2"><span class="badge cat">노말 잡몬</span></td>
+        <td rowspan="2" class="reason">폭슬라이(Thievul) PVP 비사용. 흔한 스폰</td>
+      </tr>
+      <tr>
+        <td class="no">#828</td>
+        <td><span class="name-ko">폭슬라이</span><br><span class="name-en">Thievul</span></td>
+      </tr>
+      <!-- 불꽃 -->
+      <tr>
+        <td class="no">#390</td>
+        <td><span class="name-ko">불꽃숭이</span><br><span class="name-en">Chimchar</span></td>
+        <td rowspan="2"><span class="badge cat">기타 잡몬</span></td>
+        <td rowspan="2" class="reason">초염몽(Infernape) PVP 비사용. 흔한 스폰</td>
+      </tr>
+      <tr>
+        <td class="no">#391</td>
+        <td><span class="name-ko">파이숭이</span><br><span class="name-en">Monferno</span></td>
+      </tr>
+      <!-- 원숭이 3형제 -->
+      <tr>
+        <td class="no">#511</td>
+        <td><span class="name-ko">야나프</span><br><span class="name-en">Pansage</span></td>
+        <td rowspan="3"><span class="badge cat">기타 잡몬</span></td>
+        <td rowspan="3" class="reason">원숭이 3형제(풀/불꽃/물). PVP 비사용. 이벤트 흔한 스폰</td>
+      </tr>
+      <tr>
+        <td class="no">#513</td>
+        <td><span class="name-ko">바오프</span><br><span class="name-en">Pansear</span></td>
+      </tr>
+      <tr>
+        <td class="no">#515</td>
+        <td><span class="name-ko">앗차프</span><br><span class="name-en">Panpour</span></td>
+      </tr>
+      <!-- 몽나 -->
+      <tr>
+        <td class="no">#517</td>
+        <td><span class="name-ko">몽나</span><br><span class="name-en">Munna</span></td>
+        <td rowspan="2"><span class="badge cat">기타 잡몬</span></td>
+        <td rowspan="2" class="reason">몽얌나(Musharna) PVP 비사용. 흔한 스폰</td>
+      </tr>
+      <tr>
+        <td class="no">#518</td>
+        <td><span class="name-ko">몽얌나</span><br><span class="name-en">Musharna</span></td>
+      </tr>
+      <!-- 벌레 -->
+      <tr>
+        <td class="no">#543</td>
+        <td><span class="name-ko">마디네</span><br><span class="name-en">Venipede</span></td>
+        <td rowspan="2"><span class="badge cat">벌레 잡몬</span></td>
+        <td rowspan="2" class="reason">펜드라(Scolipede) PVP 비사용</td>
+      </tr>
+      <tr>
+        <td class="no">#544</td>
+        <td><span class="name-ko">휠구</span><br><span class="name-en">Whirlipede</span></td>
+      </tr>
+      <!-- 판짱 -->
+      <tr>
+        <td class="no">#674</td>
+        <td><span class="name-ko">판짱</span><br><span class="name-en">Pancham</span></td>
+        <td rowspan="2"><span class="badge cat">기타 잡몬</span></td>
+        <td rowspan="2" class="reason">부란다(Pangoro) PVP 비사용</td>
+      </tr>
+      <tr>
+        <td class="no">#675</td>
+        <td><span class="name-ko">부란다</span><br><span class="name-en">Pangoro</span></td>
+      </tr>
+      <!-- 모래꿍 -->
+      <tr>
+        <td class="no">#769</td>
+        <td><span class="name-ko">모래꿍</span><br><span class="name-en">Sandygast</span></td>
+        <td rowspan="2"><span class="badge cat">기타 잡몬</span></td>
+        <td rowspan="2" class="reason">모래성이당(Palossand) PVP 비사용</td>
+      </tr>
+      <tr>
+        <td class="no">#770</td>
+        <td><span class="name-ko">모래성이당</span><br><span class="name-en">Palossand</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<div class="confirm-area">
+  <button class="btn confirm" onclick="doConfirm()">✅ 확인, 목록 교체 진행</button>
+  <button class="btn cancel" onclick="history.back()">취소</button>
+</div>
+
+<script>
+function doConfirm() {
+  const msg = [
+    '=== 최종 변경 내용 ===',
+    '',
+    '[ 제거 - 11종 ]',
+    '메타몽(132), 꼬리선(161), 다고리(162), 내루미(108),',
+    '초라기(170), 랜턴(171), 마릴(183), 우파(194), 니로우(198), 셀러(90)',
+    '',
+    '[ 추가 - 18종 ]',
+    '게을로(287), 비거로스(288), 훔처우(827), 폭슬라이(828),',
+    '불꽃숭이(390), 파이숭이(391), 야나프(511), 바오프(513), 앗차프(515),',
+    '몽나(517), 몽얌나(518), 마디네(543), 휠구(544),',
+    '판짱(674), 부란다(675), 모래꿍(769), 모래성이당(770)',
+    '',
+    '진행할까요?'
+  ].join('\n');
+  if (window.confirm(msg)) {
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:1.2rem;color:#22c55e;text-align:center;">✅ 확인됨.<br><span style="font-size:0.9rem;color:#888;margin-top:8px;display:block;">Claude Code에서 목록을 교체합니다.</span></div>';
+  }
+}
+</script>
+</body>
+</html>

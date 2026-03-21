@@ -219,6 +219,42 @@ const MEGA_TRADE_POKEMON: { category: string; pokemon: { no: number; name: strin
   },
 ];
 
+// 지역한정 포켓몬 목록
+const REGIONAL_POKEMON: { no: number; name: string; en: string; region: string }[] = [
+  { no: 83, name: '파오리', en: "Farfetch'd", region: '동아시아' },
+  { no: 115, name: '캥카', en: 'Kangaskhan', region: '오세아니아' },
+  { no: 122, name: '마임맨', en: 'Mr. Mime', region: '유럽' },
+  { no: 128, name: '켄타로스', en: 'Tauros', region: '북미' },
+  { no: 214, name: '헤라크로스', en: 'Heracross', region: '중남미' },
+  { no: 222, name: '코사라기', en: 'Corsola', region: '열대' },
+  { no: 324, name: '코터스', en: 'Torkoal', region: '남/동남아시아' },
+  { no: 335, name: '잔비', en: 'Zangoose', region: '반구 교대' },
+  { no: 336, name: '세비퍼', en: 'Seviper', region: '반구 교대' },
+  { no: 337, name: '루나톤', en: 'Lunatone', region: '반구 교대' },
+  { no: 338, name: '솔록', en: 'Solrock', region: '반구 교대' },
+  { no: 357, name: '트로피우스', en: 'Tropius', region: '아프리카/지중해' },
+  { no: 369, name: '시라칸', en: 'Relicanth', region: '뉴질랜드/피지' },
+  { no: 417, name: '파치리스', en: 'Pachirisu', region: '북극권' },
+  { no: 422, name: '깝질무', en: 'Shellos', region: '동/서반구 폼' },
+  { no: 439, name: '흉내내', en: 'Mime Jr.', region: '유럽 (5km알)' },
+  { no: 441, name: '페라페', en: 'Chatot', region: '남반구' },
+  { no: 455, name: '무스틴', en: 'Carnivine', region: '미국 남동부' },
+  { no: 480, name: '유크시', en: 'Uxie', region: '아시아태평양' },
+  { no: 481, name: '에무리트', en: 'Mesprit', region: '유럽/아프리카/중동' },
+  { no: 482, name: '아그놈', en: 'Azelf', region: '아메리카/그린란드' },
+  { no: 511, name: '야나프', en: 'Pansage', region: '아시아태평양' },
+  { no: 513, name: '바오프', en: 'Pansear', region: '유럽/아프리카/중동' },
+  { no: 515, name: '앗차프', en: 'Panpour', region: '아메리카/그린란드' },
+  { no: 538, name: '던지미', en: 'Throh', region: '반구 교대' },
+  { no: 539, name: '타격귀', en: 'Sawk', region: '반구 교대' },
+  { no: 550, name: '배쓰나이', en: 'Basculin', region: '동/서반구 폼' },
+  { no: 556, name: '마라카치', en: 'Maractus', region: '중남미' },
+  { no: 561, name: '심보러', en: 'Sigilyph', region: '이집트/그리스' },
+  { no: 631, name: '앤티골', en: 'Heatmor', region: '반구 교대' },
+  { no: 632, name: '아이언트', en: 'Durant', region: '반구 교대' },
+  { no: 707, name: '클레피', en: 'Klefki', region: '프랑스' },
+];
+
 // PVP 배틀 리그별 상위 포켓몬 (pvpoke.com 2026-03 기준)
 interface PvpPokemon { id: string; name: string; note?: string }
 const PVP_RANKINGS: { league: string; cp: string; ivTip: string; pokemon: PvpPokemon[] }[] = [
@@ -302,6 +338,24 @@ export default function SearchBuilderPage() {
   const [ageEndDate, setAgeEndDate] = useState('');
   const [lang, setLang] = useLocalStorage<'en' | 'ko'>('pgm-search-lang', 'ko');
 
+  // 박스 정리 도우미 상태
+  const [cleanupStars, setCleanupStars] = useState<string[]>(['0*', '1*']);
+  const [cleanupExcludes, setCleanupExcludes] = useState({
+    shiny: true,
+    fourStar: true,
+    costume: true,
+    legendary: true,
+    mythical: true,
+    background: true,
+    tagged: true,
+    shadow: false,
+    lucky: false,
+    ultraBeast: true,
+    specialMove: false,
+    favorite: true,
+    defender: false,
+  });
+
   // 언어에 따라 검색어 토큰 변환
   const toLocal = useCallback((value: string) => {
     if (lang !== 'ko') return value;
@@ -351,6 +405,45 @@ export default function SearchBuilderPage() {
     ).slice(0, 50);
   }, [pokedex, dexSearch]);
 
+  // 박스 정리 검색어 생성
+  const cleanupQuery = useMemo(() => {
+    const excludeParts: string[] = [];
+    if (cleanupExcludes.shiny) excludeParts.push(`!${toLocal('shiny')}`);
+    if (cleanupExcludes.fourStar) excludeParts.push('!4*');
+    if (cleanupExcludes.costume) excludeParts.push(`!${toLocal('costume')}`);
+    if (cleanupExcludes.legendary) excludeParts.push(`!${toLocal('legendary')}`);
+    if (cleanupExcludes.mythical) excludeParts.push(`!${toLocal('mythical')}`);
+    if (cleanupExcludes.ultraBeast) excludeParts.push(`!${toLocal('ultrabeast')}`);
+    if (cleanupExcludes.background) excludeParts.push(`!${toLocal('background')}`);
+    if (cleanupExcludes.tagged) excludeParts.push('!#');
+    if (cleanupExcludes.shadow) excludeParts.push(`!${toLocal('shadow')}`);
+    if (cleanupExcludes.lucky) excludeParts.push(`!${toLocal('lucky')}`);
+    if (cleanupExcludes.specialMove) excludeParts.push('!@special');
+    if (cleanupExcludes.favorite) excludeParts.push(`!${toLocal('favorite')}`);
+    if (cleanupExcludes.defender) excludeParts.push(`!${toLocal('defender')}`);
+
+    const exclStr = excludeParts.join('&');
+
+    if (cleanupStars.length === 0) return exclStr;
+
+    // AND > OR 우선순위 때문에 각 별등급마다 제외조건 반복 필요
+    return cleanupStars.map(star => exclStr ? `${star}&${exclStr}` : star).join(',');
+  }, [cleanupStars, cleanupExcludes, toLocal]);
+
+  // PVP 포켓몬 태그용 검색어 (리그별)
+  const pvpTagQuery = useMemo(() => {
+    return PVP_RANKINGS.map(league => {
+      const names = [...new Set(league.pokemon.map(p => lang === 'ko' ? p.name : p.id))];
+      return { league: league.league, cp: league.cp, query: names.join(',') };
+    });
+  }, [lang]);
+
+  // 지역한정 포켓몬 태그용 검색어
+  const regionalTagQuery = useMemo(() => {
+    const names = REGIONAL_POKEMON.map(p => lang === 'ko' ? p.name : p.en);
+    return names.join(',');
+  }, [lang]);
+
   const addToken = useCallback((value: string) => {
     if (['&', ',', ';', ':', '|'].includes(value)) {
       setPendingOp(value);
@@ -372,6 +465,16 @@ export default function SearchBuilderPage() {
       return prev + op + token;
     });
   }, [pendingOp, excludeMode, toLocal]);
+
+  const appendQuery = useCallback((value: string, applyExclude = false) => {
+    const op = pendingOp || '&';
+    setPendingOp(null);
+    const token = (applyExclude && excludeMode) ? `!${value}` : value;
+    setQuery(prev => {
+      if (!prev) return token;
+      return prev + op + token;
+    });
+  }, [pendingOp, excludeMode]);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(query);
@@ -441,7 +544,178 @@ export default function SearchBuilderPage() {
       </div>
 
       {/* Filter items panel - RIGHT BELOW the query bar on mobile */}
-      {activeCategory === '_pvp' ? (
+      {activeCategory === '_cleanup' ? (
+        <div className="bg-card border border-border rounded-xl p-3">
+          <h3 className="text-sm font-bold mb-1">박스 정리 도우미</h3>
+          <p className="text-xs text-muted-foreground mb-4">제외 조건을 설정하고 검색어를 생성하세요. 태그(#)로 PVP/지역한정 포켓몬을 미리 보호할 수 있습니다.</p>
+
+          {/* 사전 태그 작업 */}
+          <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-3 mb-4 border border-blue-200 dark:border-blue-800">
+            <h4 className="text-xs font-bold mb-2 text-blue-700 dark:text-blue-300">사전 준비: 소중한 포켓몬 태그하기</h4>
+            <p className="text-[10px] text-blue-600 dark:text-blue-400 mb-3">아래 검색어로 찾은 포켓몬에 태그를 달아두면 정리 시 자동으로 제외됩니다 (!# 옵션)</p>
+
+            {/* PVP 태그 */}
+            <div className="mb-3">
+              <p className="text-[10px] font-bold mb-1.5">배틀리그 상위 포켓몬 찾기</p>
+              <div className="flex gap-1.5 flex-wrap">
+                {pvpTagQuery.map(league => (
+                  <button key={league.league} onClick={() => { appendQuery(league.query); }}
+                    className="px-2 py-1.5 text-[10px] bg-white dark:bg-gray-800 rounded border border-blue-300 dark:border-blue-700 hover:bg-blue-100 dark:hover:bg-blue-900">
+                    {league.league} ({league.cp})
+                  </button>
+                ))}
+                <button onClick={() => {
+                  const allNames = [...new Set(PVP_RANKINGS.flatMap(l => l.pokemon.map(p => lang === 'ko' ? p.name : p.id)))];
+                  appendQuery(allNames.join(','));
+                }} className="px-2 py-1.5 text-[10px] bg-blue-500 text-white rounded font-medium">
+                  전체 리그 통합
+                </button>
+              </div>
+            </div>
+
+            {/* 지역한정 태그 */}
+            <div className="mb-2">
+              <p className="text-[10px] font-bold mb-1.5">지역한정 포켓몬 찾기</p>
+              <div className="flex gap-1.5 flex-wrap">
+                <button onClick={() => { appendQuery(regionalTagQuery); }}
+                  className="px-2 py-1.5 text-[10px] bg-green-500 text-white rounded font-medium">
+                  지역한정 전체 ({REGIONAL_POKEMON.length}종)
+                </button>
+              </div>
+            </div>
+
+            {/* 지역한정 포켓몬 목록 */}
+            <details className="mt-2">
+              <summary className="text-[10px] cursor-pointer text-blue-600 dark:text-blue-400">지역한정 포켓몬 목록 보기</summary>
+              <div className="flex flex-wrap gap-1 mt-2">
+                {REGIONAL_POKEMON.map(p => (
+                  <span key={p.no} className="px-1.5 py-0.5 text-[9px] bg-white dark:bg-gray-800 rounded border border-border">
+                    #{p.no} {p.name} <span className="text-muted-foreground">({p.region})</span>
+                  </span>
+                ))}
+              </div>
+            </details>
+
+            <p className="text-[10px] text-blue-600 dark:text-blue-400 mt-2">
+              검색어를 복사 → 게임에서 검색 → 결과 전체선택 → 태그 달기
+            </p>
+          </div>
+
+          {/* 별등급 선택 */}
+          <div className="mb-4">
+            <h4 className="text-xs font-bold mb-2">전송 대상 별등급</h4>
+            <div className="flex gap-2 flex-wrap">
+              {['0*', '1*', '2*', '3*'].map(star => (
+                <label key={star} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs cursor-pointer border ${
+                  cleanupStars.includes(star)
+                    ? 'bg-red-500 text-white border-red-500'
+                    : 'bg-muted border-border'
+                }`}>
+                  <input
+                    type="checkbox"
+                    checked={cleanupStars.includes(star)}
+                    onChange={() => setCleanupStars(prev =>
+                      prev.includes(star) ? prev.filter(s => s !== star) : [...prev, star]
+                    )}
+                    className="w-3 h-3"
+                  />
+                  {star}
+                </label>
+              ))}
+            </div>
+            <p className="text-[10px] text-muted-foreground mt-1">0성·1성은 대부분 안전하게 전송 가능, 2성은 검토 권장</p>
+          </div>
+
+          {/* 제외 조건 체크박스 */}
+          <div className="mb-4">
+            <h4 className="text-xs font-bold mb-2">제외 (보호) 조건</h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+              {([
+                { key: 'shiny', label: '색이 다른 포켓몬', icon: '✨', default: true },
+                { key: 'fourStar', label: '4성 (100%)', icon: '⭐', default: true },
+                { key: 'costume', label: '코스튬 포켓몬', icon: '🎭', default: true },
+                { key: 'legendary', label: '전설의 포켓몬', icon: '🏆', default: true },
+                { key: 'mythical', label: '환상의 포켓몬', icon: '🌟', default: true },
+                { key: 'ultraBeast', label: '울트라비스트', icon: '👾', default: true },
+                { key: 'background', label: '배경 포켓몬', icon: '🖼️', default: true },
+                { key: 'tagged', label: '태그 있는 포켓몬', icon: '🏷️', default: true },
+                { key: 'favorite', label: '즐겨찾기', icon: '❤️', default: true },
+                { key: 'shadow', label: '그림자 포켓몬', icon: '👤', default: false },
+                { key: 'lucky', label: '반짝반짝 포켓몬', icon: '🍀', default: false },
+                { key: 'specialMove', label: '레거시 기술 보유', icon: '🎯', default: false },
+                { key: 'defender', label: '체육관 방어 중', icon: '🏰', default: false },
+              ] as const).map(opt => (
+                <label key={opt.key} className={`flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-[11px] cursor-pointer border ${
+                  cleanupExcludes[opt.key]
+                    ? 'bg-green-50 dark:bg-green-950 border-green-300 dark:border-green-700'
+                    : 'bg-muted border-border opacity-60'
+                }`}>
+                  <input
+                    type="checkbox"
+                    checked={cleanupExcludes[opt.key]}
+                    onChange={() => setCleanupExcludes(prev => ({ ...prev, [opt.key]: !prev[opt.key] }))}
+                    className="w-3 h-3"
+                  />
+                  <span>{opt.icon}</span>
+                  <span>{opt.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          {/* 생성된 검색어 */}
+          <div className="bg-muted rounded-lg p-3 mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <h4 className="text-xs font-bold">생성된 정리 검색어</h4>
+              <span className={`text-[10px] ${cleanupQuery.length > 500 ? 'text-red-500 font-bold' : 'text-muted-foreground'}`}>
+                {cleanupQuery.length}자
+                {cleanupQuery.length > 500 && ' (500자 초과!)'}
+              </span>
+            </div>
+            <div className="bg-background rounded border border-border p-2 mb-2 font-mono text-[11px] break-all max-h-24 overflow-y-auto">
+              {cleanupQuery || '조건을 선택하세요'}
+            </div>
+            <div className="flex gap-2">
+              <button onClick={() => { appendQuery(cleanupQuery); }}
+                className="px-3 py-1.5 text-xs bg-primary text-primary-foreground rounded-lg font-medium">
+                검색창에 적용
+              </button>
+              <button onClick={() => { navigator.clipboard.writeText(cleanupQuery); }}
+                className="px-3 py-1.5 text-xs bg-accent text-white rounded-lg">
+                바로 복사
+              </button>
+            </div>
+          </div>
+
+          {/* 빠른 프리셋 */}
+          <div className="border-t border-border pt-3">
+            <h4 className="text-xs font-bold mb-2">빠른 프리셋</h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+              {[
+                { label: '0성 전부 정리', stars: ['0*'], desc: '가장 안전한 정리' },
+                { label: '0~1성 정리', stars: ['0*', '1*'], desc: '일반적인 정리' },
+                { label: '0~2성 정리', stars: ['0*', '1*', '2*'], desc: '적극적인 정리' },
+                { label: '3성 이하 전부', stars: ['0*', '1*', '2*', '3*'], desc: '4성만 남기기' },
+              ].map(preset => (
+                <button key={preset.label} onClick={() => setCleanupStars(preset.stars)}
+                  className="px-2 py-1.5 bg-muted hover:bg-muted/80 rounded-lg text-xs border border-border text-left">
+                  <span className="font-medium block">{preset.label}</span>
+                  <span className="text-[10px] text-muted-foreground">{preset.desc}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* 안내 */}
+          <div className="mt-4 pt-3 border-t border-border">
+            <p className="text-[10px] text-muted-foreground leading-relaxed">
+              * PVP 개체값(0/15/15 등)은 인게임 검색만으로 완벽히 필터링할 수 없습니다. PokeGenie 앱을 병행하세요.<br/>
+              * !# (태그 제외)를 활용하면 PVP·지역한정 포켓몬을 사전에 태그로 보호할 수 있습니다.<br/>
+              * 검색어가 500자를 초과하면 게임에서 잘릴 수 있습니다. 별등급을 나눠서 검색하세요.
+            </p>
+          </div>
+        </div>
+      ) : activeCategory === '_pvp' ? (
         <div className="bg-card border border-border rounded-xl p-3">
           <h3 className="text-sm font-bold mb-1">PVP 배틀 상위 랭크</h3>
           <p className="text-xs text-muted-foreground mb-3">pvpoke.com 기준 리그별 Top 30. 검색어 생성 + PVP 개체값 검색</p>
@@ -450,23 +724,23 @@ export default function SearchBuilderPage() {
           <div className="bg-muted/50 rounded-lg p-3 mb-4">
             <h4 className="text-xs font-bold mb-2">PVP 개체값 검색어</h4>
             <div className="flex gap-2 flex-wrap mb-2">
-              <button onClick={() => { setQuery(localizeQuery('0-1attack&13-15defense&13-15hp&cp-1500')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('0-1attack&13-15defense&13-15hp&cp-1500'), true); }}
                 className="px-3 py-1.5 text-xs bg-green-500 text-white rounded-lg">그레이트 PVP IV</button>
-              <button onClick={() => { setQuery(localizeQuery('0-1attack&13-15defense&13-15hp&cp-2500')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('0-1attack&13-15defense&13-15hp&cp-2500'), true); }}
                 className="px-3 py-1.5 text-xs bg-yellow-500 text-white rounded-lg">울트라 PVP IV</button>
-              <button onClick={() => { setQuery(localizeQuery('4*')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('4*'), true); }}
                 className="px-3 py-1.5 text-xs bg-purple-500 text-white rounded-lg">마스터 PVP IV (4성)</button>
             </div>
             <div className="flex gap-2 flex-wrap">
-              <button onClick={() => { setQuery(localizeQuery('0attack&15defense&15hp')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('0attack&15defense&15hp'), true); }}
                 className="px-2 py-1 text-[10px] bg-muted rounded border border-border">0/15/15</button>
-              <button onClick={() => { setQuery(localizeQuery('1attack&15defense&15hp')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('1attack&15defense&15hp'), true); }}
                 className="px-2 py-1 text-[10px] bg-muted rounded border border-border">1/15/15</button>
-              <button onClick={() => { setQuery(localizeQuery('0attack&15defense&14hp')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('0attack&15defense&14hp'), true); }}
                 className="px-2 py-1 text-[10px] bg-muted rounded border border-border">0/15/14</button>
-              <button onClick={() => { setQuery(localizeQuery('0-2attack&14-15defense&14-15hp')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('0-2attack&14-15defense&14-15hp'), true); }}
                 className="px-2 py-1 text-[10px] bg-muted rounded border border-border">상위 PVP IV 범위</button>
-              <button onClick={() => { setQuery(localizeQuery('0-4attack&15defense&15hp')); setPendingOp(null); }}
+              <button onClick={() => { appendQuery(localizeQuery('0-4attack&15defense&15hp'), true); }}
                 className="px-2 py-1 text-[10px] bg-muted rounded border border-border">공0~4/방15/체15</button>
             </div>
             <p className="text-[10px] text-muted-foreground mt-2">그레이트/울트라: 낮은 공격 + 높은 방어·HP가 유리 | 마스터: 100%가 최적</p>
@@ -486,8 +760,7 @@ export default function SearchBuilderPage() {
                     <button
                       onClick={() => {
                         const names = [...new Set(league.pokemon.map(p => pvpName(p)))];
-                        setQuery(names.join(','));
-                        setPendingOp(null);
+                        appendQuery(names.join(','), true);
                       }}
                       className="px-2 py-1 text-[10px] bg-accent/10 text-accent rounded border border-accent/30"
                     >
@@ -523,7 +796,7 @@ export default function SearchBuilderPage() {
                 { label: '랭크배틀 보상', query: '@return,@frustration' },
                 { label: 'XL 캔디 필요', query: 'cp-1500&xl,cp-2500&xl' },
               ].map(p => (
-                <button key={p.label} onClick={() => { setQuery(localizeQuery(p.query)); setPendingOp(null); }}
+                <button key={p.label} onClick={() => { appendQuery(localizeQuery(p.query), true); }}
                   className="px-2 py-1.5 bg-muted hover:bg-muted/80 rounded-lg text-xs border border-border text-left">
                   <span className="font-medium block">{p.label}</span>
                   <span className="font-mono text-accent text-[10px]">{p.query}</span>
@@ -544,8 +817,7 @@ export default function SearchBuilderPage() {
               onClick={() => {
                 const allNames = MEGA_TRADE_POKEMON.flatMap(c => c.pokemon.map(p => pokeName(p)));
                 const unique = [...new Set(allNames)];
-                setQuery(unique.join(',') + localizeQuery('&!traded&!lucky'));
-                setPendingOp(null);
+                appendQuery(unique.join(',') + localizeQuery('&!traded&!lucky'));
               }}
               className="px-3 py-1.5 text-xs bg-blue-500 text-white rounded-lg font-medium"
             >
@@ -555,8 +827,7 @@ export default function SearchBuilderPage() {
               onClick={() => {
                 const allNames = MEGA_TRADE_POKEMON.flatMap(c => c.pokemon.map(p => pokeName(p)));
                 const unique = [...new Set(allNames)];
-                setQuery(unique.join(',') + localizeQuery('&!traded&!lucky&!4*'));
-                setPendingOp(null);
+                appendQuery(unique.join(',') + localizeQuery('&!traded&!lucky&!4*'));
               }}
               className="px-3 py-1.5 text-xs bg-purple-500 text-white rounded-lg font-medium"
             >
@@ -576,8 +847,7 @@ export default function SearchBuilderPage() {
                     <button
                       onClick={() => {
                         const names = [...new Set(cat.pokemon.map(p => pokeName(p)))];
-                        setQuery(names.join(',') + localizeQuery('&!traded&!lucky'));
-                        setPendingOp(null);
+                        appendQuery(names.join(',') + localizeQuery('&!traded&!lucky'));
                       }}
                       className="px-2 py-1 text-[10px] bg-accent/10 text-accent rounded border border-accent/30"
                     >
@@ -618,8 +888,7 @@ export default function SearchBuilderPage() {
               onClick={() => {
                 const allNames = TRASH_POKEMON.flatMap(c => c.pokemon.map(p => pokeName(p)));
                 const q = allNames.join(',') + localizeQuery('&!shiny&!4*&!shadow&!costume&!lucky&!favorite&!dynamax&!gigantamax&!#');
-                setQuery(q);
-                setPendingOp(null);
+                appendQuery(q);
               }}
               className="px-3 py-1.5 text-xs bg-red-500 text-white rounded-lg font-medium"
             >
@@ -629,8 +898,7 @@ export default function SearchBuilderPage() {
               onClick={() => {
                 const allNames = TRASH_POKEMON.flatMap(c => c.pokemon.map(p => pokeName(p)));
                 const q = allNames.join(',') + localizeQuery('&!shiny&!4*&!3*&!shadow&!costume&!lucky&!favorite&!dynamax&!gigantamax&!#');
-                setQuery(q);
-                setPendingOp(null);
+                appendQuery(q);
               }}
               className="px-3 py-1.5 text-xs bg-orange-500 text-white rounded-lg font-medium"
             >
@@ -640,8 +908,7 @@ export default function SearchBuilderPage() {
               onClick={() => {
                 const allNames = TRASH_POKEMON.flatMap(c => c.pokemon.map(p => pokeName(p)));
                 const q = allNames.join(',') + localizeQuery('&!shiny&!4*&!3*&!shadow&!costume&!lucky&!favorite&!dynamax&!gigantamax&!#&!traded');
-                setQuery(q);
-                setPendingOp(null);
+                appendQuery(q);
               }}
               className="px-3 py-1.5 text-xs bg-amber-500 text-white rounded-lg font-medium"
             >
@@ -661,8 +928,7 @@ export default function SearchBuilderPage() {
                     <button
                       onClick={() => {
                         const q = cat.pokemon.map(p => pokeName(p)).join(',') + localizeQuery('&!shiny&!4*&!shadow&!costume&!lucky&!favorite&!dynamax&!gigantamax&!#');
-                        setQuery(q);
-                        setPendingOp(null);
+                        appendQuery(q);
                       }}
                       className="px-2 py-1 text-[10px] bg-accent/10 text-accent rounded border border-accent/30"
                     >
@@ -757,10 +1023,8 @@ export default function SearchBuilderPage() {
                     </span>
                   </p>
                   <div className="flex gap-2 flex-wrap">
-                    <button onClick={() => { setQuery(ageQuery); setPendingOp(null); }}
-                      className="px-3 py-1.5 text-xs bg-blue-500 text-white rounded-lg">검색어 생성</button>
-                    <button onClick={() => { addToken(ageQuery); }}
-                      className="px-3 py-1.5 text-xs bg-green-500 text-white rounded-lg">기존 검색어에 추가</button>
+                    <button onClick={() => { appendQuery(ageQuery); }}
+                      className="px-3 py-1.5 text-xs bg-blue-500 text-white rounded-lg">검색어 추가</button>
                   </div>
                 </div>
               );
@@ -984,7 +1248,7 @@ export default function SearchBuilderPage() {
             { label: 'XXL', query: 'xxl' },
             { label: '최고의 파트너', query: 'buddy5' },
           ].map(preset => (
-            <button key={preset.label} onClick={() => { setQuery(localizeQuery(preset.query)); setPendingOp(null); }}
+            <button key={preset.label} onClick={() => { appendQuery(localizeQuery(preset.query)); }}
               className="px-2 py-1.5 bg-muted hover:bg-muted/80 rounded-lg text-xs border border-border text-left">
               <span className="font-medium block">{preset.label}</span>
               <span className="font-mono text-accent text-[10px]">{preset.query}</span>

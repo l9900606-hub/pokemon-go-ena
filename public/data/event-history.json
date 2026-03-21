@@ -2,1153 +2,1153 @@
   "fieldEvents": [
     {
       "year": 2017,
-      "date": "Jul 22",
+      "date": "7월 22일",
       "name": "Pokémon GO Fest 2017",
       "type": "Go Fest",
-      "location": "Grant Park, Chicago, USA",
-      "details": "First ever Go Fest. Plagued by technical issues; Niantic offered full refunds and $100 in Pokécoins."
+      "location": "그랜트 파크, 시카고, 미국",
+      "details": "최초의 Go Fest. 기술적 문제로 어려움을 겪었으며, 나이앤틱이 전액 환불 및 100달러 포켓코인을 제공."
     },
     {
       "year": 2018,
-      "date": "Jul 14-15",
+      "date": "7월 14-15일",
       "name": "Pokémon GO Fest 2018",
       "type": "Go Fest",
-      "location": "Lincoln Park, Chicago, USA",
-      "details": "Celebi Special Research debut. Featured diverse habitat zones."
+      "location": "링컨 파크, 시카고, 미국",
+      "details": "세레비 스페셜 리서치 최초 등장. 다양한 서식지 존 운영."
     },
     {
       "year": 2018,
-      "date": "Jun 30 - Jul 1",
-      "name": "Safari Zone Dortmund 2018",
+      "date": "6월 30일 - 7월 1일",
+      "name": "사파리존 도르트문트 2018",
       "type": "Safari Zone",
-      "location": "Westfalenpark, Dortmund, Germany",
-      "details": "Shiny Roselia debut. Unown letters D-O-R-T-M-U-N-D available."
+      "location": "베스트팔렌파크, 도르트문트, 독일",
+      "details": "이로치 로젤리아 최초 등장. 안농 D-O-R-T-M-U-N-D 출현."
     },
     {
       "year": 2019,
-      "date": "Jun 13-16",
+      "date": "6월 13-16일",
       "name": "Pokémon GO Fest 2019",
       "type": "Go Fest",
-      "location": "Grant Park, Chicago, USA",
-      "details": "Jirachi Special Research debut. Habitat zones with rotating spawns."
+      "location": "그랜트 파크, 시카고, 미국",
+      "details": "지라치 스페셜 리서치 최초 등장. 서식지 존 로테이션 스폰."
     },
     {
       "year": 2019,
-      "date": "Jul 4-7",
-      "name": "Pokémon GO Fest 2019 Dortmund",
+      "date": "7월 4-7일",
+      "name": "Pokémon GO Fest 2019 도르트문트",
       "type": "Go Fest",
-      "location": "Westfalenpark, Dortmund, Germany",
-      "details": "European Go Fest event."
+      "location": "베스트팔렌파크, 도르트문트, 독일",
+      "details": "유럽 Go Fest 이벤트."
     },
     {
       "year": 2019,
-      "date": "Aug 6-12",
-      "name": "Pokémon GO Fest 2019 Yokohama",
+      "date": "8월 6-12일",
+      "name": "Pokémon GO Fest 2019 요코하마",
       "type": "Go Fest",
-      "location": "Rinko Park / Red Brick Warehouse, Yokohama, Japan",
-      "details": "Asia Go Fest event."
+      "location": "린코 파크 / 아카렌가 창고, 요코하마, 일본",
+      "details": "아시아 Go Fest 이벤트."
     },
     {
       "year": 2020,
-      "date": "Jul 25-26",
+      "date": "7월 25-26일",
       "name": "Pokémon GO Fest 2020",
       "type": "Go Fest",
-      "location": "Global (virtual due to COVID)",
-      "details": "First fully virtual Go Fest. Victini Special Research debut."
+      "location": "글로벌 (코로나로 인한 온라인 개최)",
+      "details": "최초의 완전 온라인 Go Fest. 빅티니 스페셜 리서치 최초 등장."
     },
     {
       "year": 2021,
-      "date": "Feb 20",
-      "name": "Pokémon GO Tour: Kanto",
+      "date": "2월 20일",
+      "name": "Pokémon GO Tour: 관동지방",
       "type": "Go Tour",
-      "location": "Global",
-      "details": "Shiny Mew debut via Special Research. Red/Green version choice. All 150 Kanto shinies available."
+      "location": "글로벌",
+      "details": "이로치 뮤 스페셜 리서치 최초 등장. 레드/그린 버전 선택. 관동지방 150종 이로치 전부 출현."
     },
     {
       "year": 2021,
-      "date": "Jul 17-18",
+      "date": "7월 17-18일",
       "name": "Pokémon GO Fest 2021",
       "type": "Go Fest",
-      "location": "Global (virtual)",
-      "details": "Meloetta Special Research debut. Day 1: habitat hours. Day 2: raid day."
+      "location": "글로벌 (온라인)",
+      "details": "메로엣타 스페셜 리서치 최초 등장. 1일차: 서식지 시간, 2일차: 레이드 데이."
     },
     {
       "year": 2022,
-      "date": "Feb 26-27",
-      "name": "Pokémon GO Tour: Johto",
+      "date": "2월 26-27일",
+      "name": "Pokémon GO Tour: 성도지방",
       "type": "Go Tour",
-      "location": "Global (in-person in select cities)",
-      "details": "Gold/Silver version choice. Apex Shadow Ho-Oh and Apex Shadow Lugia."
+      "location": "글로벌 (일부 도시 현장 참여)",
+      "details": "골드/실버 버전 선택. 에이펙스 섀도우 칠색조 및 에이펙스 섀도우 루기아."
     },
     {
       "year": 2022,
-      "date": "Jun 4-5",
+      "date": "6월 4-5일",
       "name": "Pokémon GO Fest 2022",
       "type": "Go Fest",
-      "location": "Global",
-      "details": "Shaymin (Land Forme) debut. Nihilego Ultra Beast debut."
+      "location": "글로벌",
+      "details": "쉐이미(랜드폼) 최초 등장. 텅비드 울트라비스트 최초 등장."
     },
     {
       "year": 2022,
-      "date": "Aug 5-7",
-      "name": "Pokémon GO Fest 2022: Sapporo",
+      "date": "8월 5-7일",
+      "name": "Pokémon GO Fest 2022: 삿포로",
       "type": "Go Fest",
-      "location": "Nakajima Park, Sapporo, Japan",
-      "details": "In-person Go Fest with Pansage, Panpour, Pansear spawns."
+      "location": "나카지마 공원, 삿포로, 일본",
+      "details": "현장 Go Fest. 야나프, 바오프, 히야프 스폰."
     },
     {
       "year": 2022,
-      "date": "Aug 12-14",
-      "name": "Pokémon GO Fest 2022: Berlin",
+      "date": "8월 12-14일",
+      "name": "Pokémon GO Fest 2022: 베를린",
       "type": "Go Fest",
-      "location": "Britzer Garten, Berlin, Germany",
-      "details": "In-person European Go Fest."
+      "location": "브리처 가르텐, 베를린, 독일",
+      "details": "유럽 현장 Go Fest."
     },
     {
       "year": 2022,
-      "date": "Aug 19-21",
-      "name": "Pokémon GO Fest 2022: Seattle",
+      "date": "8월 19-21일",
+      "name": "Pokémon GO Fest 2022: 시애틀",
       "type": "Go Fest",
-      "location": "Seattle Center, Seattle, USA",
-      "details": "In-person Go Fest finale."
+      "location": "시애틀 센터, 시애틀, 미국",
+      "details": "현장 Go Fest 피날레."
     },
     {
       "year": 2023,
-      "date": "Feb 18-19",
-      "name": "Pokémon GO Tour: Hoenn - Las Vegas",
+      "date": "2월 18-19일",
+      "name": "Pokémon GO Tour: 호연지방 - 라스베이거스",
       "type": "Go Tour",
-      "location": "Sunset Park, Las Vegas, USA",
-      "details": "Primal Groudon & Primal Kyogre debut. Shiny Kecleon debut. Ruby/Sapphire version choice."
+      "location": "선셋 파크, 라스베이거스, 미국",
+      "details": "원시그란돈 & 원시가이오가 최초 등장. 이로치 켈리몬 최초 등장. 루비/사파이어 버전 선택."
     },
     {
       "year": 2023,
-      "date": "Feb 25-26",
-      "name": "Pokémon GO Tour: Hoenn - Global",
+      "date": "2월 25-26일",
+      "name": "Pokémon GO Tour: 호연지방 - 글로벌",
       "type": "Go Tour",
-      "location": "Global",
-      "details": "Global event with Primal Raids and all Hoenn shinies."
+      "location": "글로벌",
+      "details": "글로벌 이벤트. 원시 레이드 및 호연지방 전 이로치 출현."
     },
     {
       "year": 2023,
-      "date": "Aug 4-6",
-      "name": "Pokémon GO Fest 2023: London",
+      "date": "8월 4-6일",
+      "name": "Pokémon GO Fest 2023: 런던",
       "type": "Go Fest",
-      "location": "Brockwell Park, London, UK",
-      "details": "Diancie debut. Mega Rayquaza debut. Shiny Unown ! debut."
+      "location": "브록웰 파크, 런던, 영국",
+      "details": "디안시 최초 등장. 메가레쿠쟈 최초 등장. 이로치 안농 ! 최초 등장."
     },
     {
       "year": 2023,
-      "date": "Aug 4-6",
-      "name": "Pokémon GO Fest 2023: Osaka",
+      "date": "8월 4-6일",
+      "name": "Pokémon GO Fest 2023: 오사카",
       "type": "Go Fest",
-      "location": "Expo '70 Commemorative Park, Osaka, Japan",
-      "details": "Diancie debut. Mega Rayquaza. Shiny Dewpider & Shiny Petilil debut."
+      "location": "엑스포 '70 기념공원, 오사카, 일본",
+      "details": "디안시 최초 등장. 메가레쿠쟈. 이로치 물거미 & 이로치 치릴리 최초 등장."
     },
     {
       "year": 2023,
-      "date": "Aug 18-20",
-      "name": "Pokémon GO Fest 2023: New York City",
+      "date": "8월 18-20일",
+      "name": "Pokémon GO Fest 2023: 뉴욕",
       "type": "Go Fest",
-      "location": "Randall's Island Park, New York City, USA",
-      "details": "Diancie & Mega Rayquaza available. Third in-person Go Fest city of 2023."
+      "location": "랜달스 아일랜드 파크, 뉴욕, 미국",
+      "details": "디안시 & 메가레쿠쟈 등장. 2023년 세 번째 현장 Go Fest 도시."
     },
     {
       "year": 2023,
-      "date": "Aug 26-27",
-      "name": "Pokémon GO Fest 2023: Global",
+      "date": "8월 26-27일",
+      "name": "Pokémon GO Fest 2023: 글로벌",
       "type": "Go Fest",
-      "location": "Global",
-      "details": "Global Go Fest event with Diancie access for ticket holders."
+      "location": "글로벌",
+      "details": "글로벌 Go Fest 이벤트. 티켓 소유자 디안시 접근 가능."
     },
     {
       "year": 2023,
-      "date": "Oct 7-8",
-      "name": "City Safari: Seoul",
+      "date": "10월 7-8일",
+      "name": "시티 사파리: 서울",
       "type": "City Safari",
-      "location": "Insadong, Namsan Tower, Hyundai Outlet Dongdaemun, Seoul, South Korea",
-      "details": "Skiddo debut. First City Safari event."
+      "location": "인사동, 남산타워, 현대아울렛 동대문, 서울, 대한민국",
+      "details": "메이클 최초 등장. 최초의 시티 사파리 이벤트."
     },
     {
       "year": 2023,
-      "date": "Oct 13-14",
-      "name": "City Safari: Barcelona",
+      "date": "10월 13-14일",
+      "name": "시티 사파리: 바르셀로나",
       "type": "City Safari",
-      "location": "Westfield Glories & La Maquinista, Barcelona, Spain",
-      "details": "City Safari event in Europe."
+      "location": "웨스트필드 글로리스 & 라 마키니스타, 바르셀로나, 스페인",
+      "details": "유럽 시티 사파리 이벤트."
     },
     {
       "year": 2023,
-      "date": "Nov 4-5",
-      "name": "City Safari: Mexico City",
+      "date": "11월 4-5일",
+      "name": "시티 사파리: 멕시코시티",
       "type": "City Safari",
-      "location": "Parque España & Parque Hundido, Mexico City, Mexico",
-      "details": "City Safari event in Latin America."
+      "location": "파르케 에스파냐 & 파르케 운디도, 멕시코시티, 멕시코",
+      "details": "중남미 시티 사파리 이벤트."
     },
     {
       "year": 2024,
-      "date": "Feb 17-18",
-      "name": "Pokémon GO Tour: Sinnoh - Los Angeles",
+      "date": "2월 17-18일",
+      "name": "Pokémon GO Tour: 신오지방 - 로스앤젤레스",
       "type": "Go Tour",
-      "location": "Rose Bowl Stadium, Los Angeles/Pasadena, USA",
-      "details": "Origin Forme Dialga & Palkia debut. Diamond/Pearl version choice."
+      "location": "로즈 볼 스타디움, 로스앤젤레스/패서디나, 미국",
+      "details": "오리진 디아루가 & 오리진 펄기아 최초 등장. 다이아몬드/펄 버전 선택."
     },
     {
       "year": 2024,
-      "date": "Feb 24-25",
-      "name": "Pokémon GO Tour: Sinnoh - Global",
+      "date": "2월 24-25일",
+      "name": "Pokémon GO Tour: 신오지방 - 글로벌",
       "type": "Go Tour",
-      "location": "Global",
-      "details": "Global Sinnoh Tour with all Sinnoh shinies and Primal/Origin raids."
+      "location": "글로벌",
+      "details": "글로벌 신오 투어. 신오지방 전 이로치 및 원시/오리진 레이드."
     },
     {
       "year": 2024,
-      "date": "Mar 9-10",
-      "name": "City Safari: Tainan",
+      "date": "3월 9-10일",
+      "name": "시티 사파리: 타이난",
       "type": "City Safari",
-      "location": "National Cheng Kung University, Tainan, Taiwan",
-      "details": "City Safari event in Taiwan."
+      "location": "국립성공대학교, 타이난, 대만",
+      "details": "대만 시티 사파리 이벤트."
     },
     {
       "year": 2024,
-      "date": "May 30 - Jun 2",
-      "name": "Pokémon GO Fest 2024: Sendai",
+      "date": "5월 30일 - 6월 2일",
+      "name": "Pokémon GO Fest 2024: 센다이",
       "type": "Go Fest",
-      "location": "Nanakita Park, Sendai, Japan",
-      "details": "Marshadow debut. Necrozma debut. Shiny Emolga debut. Sun Crown/Moon Crown Eevee & Pikachu."
+      "location": "나나키타 공원, 센다이, 일본",
+      "details": "마샤도 최초 등장. 네크로즈마 최초 등장. 이로치 에몽가 최초 등장. 태양/달 왕관 이브이 & 피카츄."
     },
     {
       "year": 2024,
-      "date": "Jun 14-16",
-      "name": "Pokémon GO Fest 2024: Madrid",
+      "date": "6월 14-16일",
+      "name": "Pokémon GO Fest 2024: 마드리드",
       "type": "Go Fest",
-      "location": "Parque Juan Carlos I, Madrid, Spain",
-      "details": "Marshadow available. Shiny Crabrawler debut."
+      "location": "파르케 후안 카를로스 I, 마드리드, 스페인",
+      "details": "마샤도 등장. 이로치 무스력 최초 등장."
     },
     {
       "year": 2024,
-      "date": "Jul 5-7",
-      "name": "Pokémon GO Fest 2024: New York City",
+      "date": "7월 5-7일",
+      "name": "Pokémon GO Fest 2024: 뉴욕",
       "type": "Go Fest",
-      "location": "Randall's Island Park, New York City, USA",
-      "details": "Marshadow available. Shiny Ducklett debut."
+      "location": "랜달스 아일랜드 파크, 뉴욕, 미국",
+      "details": "마샤도 등장. 이로치 꼬지보리 최초 등장."
     },
     {
       "year": 2024,
-      "date": "Jul 13-14",
-      "name": "Pokémon GO Fest 2024: Global",
+      "date": "7월 13-14일",
+      "name": "Pokémon GO Fest 2024: 글로벌",
       "type": "Go Fest",
-      "location": "Global",
-      "details": "Marshadow debut for global players. Necrozma raids. 4 habitat rotations."
+      "location": "글로벌",
+      "details": "글로벌 플레이어 마샤도 최초 등장. 네크로즈마 레이드. 4개 서식지 로테이션."
     },
     {
       "year": 2024,
-      "date": "Sep 21-22",
-      "name": "City Safari: Jakarta",
+      "date": "9월 21-22일",
+      "name": "시티 사파리: 자카르타",
       "type": "City Safari",
-      "location": "Jakarta, Indonesia",
-      "details": "City Safari event in Southeast Asia."
+      "location": "자카르타, 인도네시아",
+      "details": "동남아시아 시티 사파리 이벤트."
     },
     {
       "year": 2024,
-      "date": "Sep 27-29",
-      "name": "Pokémon GO Safari Zone: Incheon",
+      "date": "9월 27-29일",
+      "name": "Pokémon GO 사파리존: 인천",
       "type": "Safari Zone",
-      "location": "Songdo Central Park, Incheon, South Korea",
-      "details": "Safari Hat Pikachu. Maractus featured. Park + City experience split."
+      "location": "송도 센트럴파크, 인천, 대한민국",
+      "details": "사파리 모자 피카츄. 마라카치 특별 출현. 공원 & 시티 체험 분리."
     },
     {
       "year": 2024,
-      "date": "Nov 16-17",
-      "name": "GO Wild Area: Fukuoka",
+      "date": "11월 16-17일",
+      "name": "GO 와일드 에어리어: 후쿠오카",
       "type": "Wild Area",
-      "location": "Maizuru Park, Fukuoka, Japan",
-      "details": "Idol & Rock Star Pikachu. Stud Snorlax. New event format debut."
+      "location": "마이즈루 공원, 후쿠오카, 일본",
+      "details": "아이돌 & 록스타 피카츄. 장인 잠만보. 새로운 이벤트 형식 최초 도입."
     },
     {
       "year": 2024,
-      "date": "Nov 23-24",
-      "name": "GO Wild Area: Global",
+      "date": "11월 23-24일",
+      "name": "GO 와일드 에어리어: 글로벌",
       "type": "Wild Area",
-      "location": "Global",
-      "details": "Global Wild Area event for non-attendees."
+      "location": "글로벌",
+      "details": "비참가자를 위한 글로벌 와일드 에어리어 이벤트."
     },
     {
       "year": 2024,
-      "date": "Dec 7-8",
-      "name": "City Safari: Hong Kong",
+      "date": "12월 7-8일",
+      "name": "시티 사파리: 홍콩",
       "type": "City Safari",
-      "location": "Hong Kong",
-      "details": "City Safari event in Hong Kong."
+      "location": "홍콩",
+      "details": "홍콩 시티 사파리 이벤트."
     },
     {
       "year": 2024,
-      "date": "Dec 7-8",
-      "name": "City Safari: São Paulo",
+      "date": "12월 7-8일",
+      "name": "시티 사파리: 상파울루",
       "type": "City Safari",
-      "location": "São Paulo, Brazil",
-      "details": "City Safari event in South America."
+      "location": "상파울루, 브라질",
+      "details": "남미 시티 사파리 이벤트."
     },
     {
       "year": 2025,
-      "date": "Feb 21-23",
-      "name": "Pokémon GO Tour: Unova - Los Angeles",
+      "date": "2월 21-23일",
+      "name": "Pokémon GO Tour: 하나지방 - 로스앤젤레스",
       "type": "Go Tour",
-      "location": "Los Angeles, USA",
-      "details": "In-person Unova Tour. Black/White version choice."
+      "location": "로스앤젤레스, 미국",
+      "details": "현장 하나 투어. 블랙/화이트 버전 선택."
     },
     {
       "year": 2025,
-      "date": "Feb 21-23",
-      "name": "Pokémon GO Tour: Unova - New Taipei City",
+      "date": "2월 21-23일",
+      "name": "Pokémon GO Tour: 하나지방 - 신베이",
       "type": "Go Tour",
-      "location": "New Taipei City, Taiwan",
-      "details": "In-person Unova Tour in Asia."
+      "location": "신베이시, 대만",
+      "details": "아시아 현장 하나 투어."
     },
     {
       "year": 2025,
-      "date": "Mar 1-2",
-      "name": "Pokémon GO Tour: Unova - Global",
+      "date": "3월 1-2일",
+      "name": "Pokémon GO Tour: 하나지방 - 글로벌",
       "type": "Go Tour",
-      "location": "Global",
-      "details": "Global Unova Tour event."
+      "location": "글로벌",
+      "details": "글로벌 하나 투어 이벤트."
     },
     {
       "year": 2025,
-      "date": "Mar 29-30",
-      "name": "City Safari: Singapore",
+      "date": "3월 29-30일",
+      "name": "시티 사파리: 싱가포르",
       "type": "City Safari",
-      "location": "Singapore",
-      "details": "Simultaneous City Safari across 4 cities."
+      "location": "싱가포르",
+      "details": "4개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Mar 29-30",
-      "name": "City Safari: Mumbai",
+      "date": "3월 29-30일",
+      "name": "시티 사파리: 뭄바이",
       "type": "City Safari",
-      "location": "Mumbai, India",
-      "details": "Simultaneous City Safari across 4 cities."
+      "location": "뭄바이, 인도",
+      "details": "4개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Mar 29-30",
-      "name": "City Safari: Milan",
+      "date": "3월 29-30일",
+      "name": "시티 사파리: 밀라노",
       "type": "City Safari",
-      "location": "Milan, Italy",
-      "details": "Simultaneous City Safari across 4 cities."
+      "location": "밀라노, 이탈리아",
+      "details": "4개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Mar 29-30",
-      "name": "City Safari: Santiago",
+      "date": "3월 29-30일",
+      "name": "시티 사파리: 산티아고",
       "type": "City Safari",
-      "location": "Santiago, Chile",
-      "details": "Simultaneous City Safari across 4 cities."
+      "location": "산티아고, 칠레",
+      "details": "4개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "May 29 - Jun 1",
-      "name": "Pokémon GO Fest 2025: Osaka",
+      "date": "5월 29일 - 6월 1일",
+      "name": "Pokémon GO Fest 2025: 오사카",
       "type": "Go Fest",
-      "location": "Expo '70 Commemorative Park, Osaka, Japan",
-      "details": "Volcanion debut. First in-person Go Fest of 2025."
+      "location": "엑스포 '70 기념공원, 오사카, 일본",
+      "details": "볼케니온 최초 등장. 2025년 첫 현장 Go Fest."
     },
     {
       "year": 2025,
-      "date": "Jun 6-8",
-      "name": "Pokémon GO Fest 2025: Jersey City",
+      "date": "6월 6-8일",
+      "name": "Pokémon GO Fest 2025: 저지시티",
       "type": "Go Fest",
-      "location": "Liberty State Park, Jersey City, USA",
-      "details": "Volcanion available. US in-person Go Fest."
+      "location": "리버티 스테이트 파크, 저지시티, 미국",
+      "details": "볼케니온 등장. 미국 현장 Go Fest."
     },
     {
       "year": 2025,
-      "date": "Jun 13-15",
-      "name": "Pokémon GO Fest 2025: Paris",
+      "date": "6월 13-15일",
+      "name": "Pokémon GO Fest 2025: 파리",
       "type": "Go Fest",
-      "location": "Parc de Sceaux, Paris, France",
-      "details": "Volcanion available. First-ever Go Fest in Paris."
+      "location": "파르크 드 소, 파리, 프랑스",
+      "details": "볼케니온 등장. 파리 최초 Go Fest."
     },
     {
       "year": 2025,
-      "date": "Jun 28-29",
-      "name": "Pokémon GO Fest 2025: Global",
+      "date": "6월 28-29일",
+      "name": "Pokémon GO Fest 2025: 글로벌",
       "type": "Go Fest",
-      "location": "Global",
-      "details": "Global Go Fest with Volcanion debut for worldwide players."
+      "location": "글로벌",
+      "details": "글로벌 플레이어 볼케니온 최초 등장."
     },
     {
       "year": 2025,
-      "date": "Aug 23-24",
-      "name": "Pokémon GO Fest 2025: Max Finale",
+      "date": "8월 23-24일",
+      "name": "Pokémon GO Fest 2025: 맥스 피날레",
       "type": "Go Fest",
-      "location": "Global",
-      "details": "Max Finale event closing out Go Fest 2025 season."
+      "location": "글로벌",
+      "details": "Go Fest 2025 시즌 마감 맥스 피날레 이벤트."
     },
     {
       "year": 2025,
-      "date": "Sep 27-28",
-      "name": "City Safari: Bangkok",
+      "date": "9월 27-28일",
+      "name": "시티 사파리: 방콕",
       "type": "City Safari",
-      "location": "Bangkok, Thailand",
-      "details": "Simultaneous City Safari across 5 cities."
+      "location": "방콕, 태국",
+      "details": "5개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Sep 27-28",
-      "name": "City Safari: Amsterdam",
+      "date": "9월 27-28일",
+      "name": "시티 사파리: 암스테르담",
       "type": "City Safari",
-      "location": "Amsterdam, Netherlands",
-      "details": "Simultaneous City Safari across 5 cities."
+      "location": "암스테르담, 네덜란드",
+      "details": "5개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Sep 27-28",
-      "name": "City Safari: Valencia",
+      "date": "9월 27-28일",
+      "name": "시티 사파리: 발렌시아",
       "type": "City Safari",
-      "location": "Valencia, Spain",
-      "details": "Simultaneous City Safari across 5 cities."
+      "location": "발렌시아, 스페인",
+      "details": "5개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Sep 27-28",
-      "name": "City Safari: Cancún",
+      "date": "9월 27-28일",
+      "name": "시티 사파리: 칸쿤",
       "type": "City Safari",
-      "location": "Cancún, Mexico",
-      "details": "Simultaneous City Safari across 5 cities."
+      "location": "칸쿤, 멕시코",
+      "details": "5개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Sep 27-28",
-      "name": "City Safari: Vancouver",
+      "date": "9월 27-28일",
+      "name": "시티 사파리: 밴쿠버",
       "type": "City Safari",
-      "location": "Vancouver, Canada",
-      "details": "Simultaneous City Safari across 5 cities."
+      "location": "밴쿠버, 캐나다",
+      "details": "5개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Dec 13-14",
-      "name": "City Safari: Sydney",
+      "date": "12월 13-14일",
+      "name": "시티 사파리: 시드니",
       "type": "City Safari",
-      "location": "Sydney, Australia",
-      "details": "Simultaneous City Safari across 3 cities."
+      "location": "시드니, 호주",
+      "details": "3개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Dec 13-14",
-      "name": "City Safari: Buenos Aires",
+      "date": "12월 13-14일",
+      "name": "시티 사파리: 부에노스아이레스",
       "type": "City Safari",
-      "location": "Buenos Aires, Argentina",
-      "details": "Simultaneous City Safari across 3 cities."
+      "location": "부에노스아이레스, 아르헨티나",
+      "details": "3개 도시 동시 시티 사파리."
     },
     {
       "year": 2025,
-      "date": "Dec 13-14",
-      "name": "City Safari: Miami",
+      "date": "12월 13-14일",
+      "name": "시티 사파리: 마이애미",
       "type": "City Safari",
-      "location": "Miami, USA",
-      "details": "Simultaneous City Safari across 3 cities."
+      "location": "마이애미, 미국",
+      "details": "3개 도시 동시 시티 사파리."
     },
     {
       "year": 2026,
-      "date": "Feb 20-22",
-      "name": "Pokémon GO Tour: Kalos - Los Angeles",
+      "date": "2월 20-22일",
+      "name": "Pokémon GO Tour: 칼로스지방 - 로스앤젤레스",
       "type": "Go Tour",
-      "location": "Los Angeles, USA",
-      "details": "In-person Kalos Tour. Pokémon 30th Anniversary & GO 10th Anniversary year."
+      "location": "로스앤젤레스, 미국",
+      "details": "현장 칼로스 투어. 포켓몬 30주년 & GO 10주년 기념의 해."
     },
     {
       "year": 2026,
-      "date": "Feb 20-22",
-      "name": "Pokémon GO Tour: Kalos - Tainan",
+      "date": "2월 20-22일",
+      "name": "Pokémon GO Tour: 칼로스지방 - 타이난",
       "type": "Go Tour",
-      "location": "Tainan, Taiwan",
-      "details": "In-person Kalos Tour in Asia."
+      "location": "타이난, 대만",
+      "details": "아시아 현장 칼로스 투어."
     },
     {
       "year": 2026,
-      "date": "Feb 28 - Mar 1",
-      "name": "Pokémon GO Tour: Kalos - Global",
+      "date": "2월 28일 - 3월 1일",
+      "name": "Pokémon GO Tour: 칼로스지방 - 글로벌",
       "type": "Go Tour",
-      "location": "Global",
-      "details": "Global Kalos Tour. Road to Kalos lead-up event Feb 23-27 revisiting past regions."
+      "location": "글로벌",
+      "details": "글로벌 칼로스 투어. 2월 23-27일 '로드 투 칼로스' 선행 이벤트로 과거 지방 복습."
     },
     {
       "year": 2026,
-      "date": "May 29 - Jun 1",
-      "name": "Pokémon GO Fest 2026: Tokyo",
+      "date": "5월 29일 - 6월 1일",
+      "name": "Pokémon GO Fest 2026: 도쿄",
       "type": "Go Fest",
-      "location": "Tokyo, Japan",
-      "details": "10th Anniversary Go Fest. Citywide gameplay begins May 25."
+      "location": "도쿄, 일본",
+      "details": "10주년 Go Fest. 5월 25일부터 시티와이드 게임플레이 시작."
     },
     {
       "year": 2026,
-      "date": "Jun 5-7",
-      "name": "Pokémon GO Fest 2026: Chicago",
+      "date": "6월 5-7일",
+      "name": "Pokémon GO Fest 2026: 시카고",
       "type": "Go Fest",
-      "location": "Grant Park, Chicago, USA",
-      "details": "10th Anniversary Go Fest. Citywide gameplay begins May 25. Return to original Go Fest location."
+      "location": "그랜트 파크, 시카고, 미국",
+      "details": "10주년 Go Fest. 5월 25일부터 시티와이드 게임플레이 시작. 최초 Go Fest 장소로 복귀."
     },
     {
       "year": 2026,
-      "date": "Jun 12-14",
-      "name": "Pokémon GO Fest 2026: Copenhagen",
+      "date": "6월 12-14일",
+      "name": "Pokémon GO Fest 2026: 코펜하겐",
       "type": "Go Fest",
-      "location": "Fælledparken, Copenhagen, Denmark",
-      "details": "10th Anniversary Go Fest in Europe."
+      "location": "펠레드파르켄, 코펜하겐, 덴마크",
+      "details": "유럽 10주년 Go Fest."
     },
     {
       "year": 2026,
-      "date": "Jul 11-12",
-      "name": "Pokémon GO Fest 2026: Global",
+      "date": "7월 11-12일",
+      "name": "Pokémon GO Fest 2026: 글로벌",
       "type": "Go Fest",
-      "location": "Global",
-      "details": "10th Anniversary Global Go Fest. Almost all previously released Pokémon expected to appear."
+      "location": "글로벌",
+      "details": "10주년 글로벌 Go Fest. 기존 출시된 거의 모든 포켓몬 등장 예정."
     }
   ],
   "recentEvents": [
     {
       "year": 2023,
-      "date": "Jan 7",
-      "name": "Community Day: Chespin",
+      "date": "1월 7일",
+      "name": "커뮤니티 데이: 도치마론",
       "type": "Community Day",
-      "details": "Featured: Chespin (도치마론). Exclusive move for Chesnaught."
+      "details": "주인공: 도치마론. 브리가론 전용기술."
     },
     {
       "year": 2023,
-      "date": "Jan 21",
-      "name": "Community Day Classic: Larvitar",
+      "date": "1월 21일",
+      "name": "커뮤니티 데이 클래식: 애버라스",
       "type": "Community Day Classic",
-      "details": "Featured: Larvitar (애버라스). Classic rerun."
+      "details": "주인공: 애버라스. 클래식 재진행."
     },
     {
       "year": 2023,
-      "date": "Feb 5",
-      "name": "Community Day: Noibat",
+      "date": "2월 5일",
+      "name": "커뮤니티 데이: 음뱃",
       "type": "Community Day",
-      "details": "Featured: Noibat (음뱃)."
+      "details": "주인공: 음뱃."
     },
     {
       "year": 2023,
-      "date": "Feb 18-19",
-      "name": "GO Tour: Hoenn - Las Vegas",
+      "date": "2월 18-19일",
+      "name": "GO Tour: 호연지방 - 라스베이거스",
       "type": "Go Tour",
-      "details": "In-person at Sunset Park. Primal Groudon & Kyogre debut. Shiny Kecleon debut."
+      "details": "선셋 파크 현장. 원시그란돈 & 원시가이오가 최초 등장. 이로치 켈리몬 최초 등장."
     },
     {
       "year": 2023,
-      "date": "Feb 25-26",
-      "name": "GO Tour: Hoenn - Global",
+      "date": "2월 25-26일",
+      "name": "GO Tour: 호연지방 - 글로벌",
       "type": "Go Tour",
-      "details": "Global Hoenn Tour with Ruby/Sapphire version choice."
+      "details": "글로벌 호연 투어. 루비/사파이어 버전 선택."
     },
     {
       "year": 2023,
-      "date": "Mar 18",
-      "name": "Community Day: Slowpoke/Galarian Slowpoke",
+      "date": "3월 18일",
+      "name": "커뮤니티 데이: 야돈/가라르야돈",
       "type": "Community Day",
-      "details": "Featured: Slowpoke & Galarian Slowpoke (야돈/가라르야돈)."
+      "details": "주인공: 야돈 & 가라르야돈."
     },
     {
       "year": 2023,
-      "date": "Apr 15",
-      "name": "Community Day: Togetic",
+      "date": "4월 15일",
+      "name": "커뮤니티 데이: 토게틱",
       "type": "Community Day",
-      "details": "Featured: Togetic (토게틱)."
+      "details": "주인공: 토게틱."
     },
     {
       "year": 2023,
-      "date": "Apr 29",
-      "name": "Community Day Classic: Swinub",
+      "date": "4월 29일",
+      "name": "커뮤니티 데이 클래식: 꾸꾸리",
       "type": "Community Day Classic",
-      "details": "Featured: Swinub (꾸꾸리). Classic rerun."
+      "details": "주인공: 꾸꾸리. 클래식 재진행."
     },
     {
       "year": 2023,
-      "date": "May 21",
-      "name": "Community Day: Fennekin",
+      "date": "5월 21일",
+      "name": "커뮤니티 데이: 푸호꼬",
       "type": "Community Day",
-      "details": "Featured: Fennekin (푸호꼬)."
+      "details": "주인공: 푸호꼬."
     },
     {
       "year": 2023,
-      "date": "Jun 10",
-      "name": "Community Day: Honedge",
+      "date": "6월 10일",
+      "name": "커뮤니티 데이: 터검니",
       "type": "Community Day",
-      "details": "Featured: Honedge (터검니)."
+      "details": "주인공: 터검니."
     },
     {
       "year": 2023,
-      "date": "Jul 9",
-      "name": "Community Day Classic: Squirtle",
+      "date": "7월 9일",
+      "name": "커뮤니티 데이 클래식: 꼬부기",
       "type": "Community Day Classic",
-      "details": "Featured: Squirtle (꼬부기). Classic rerun."
+      "details": "주인공: 꼬부기. 클래식 재진행."
     },
     {
       "year": 2023,
-      "date": "Jul 30",
-      "name": "Community Day: Poliwag",
+      "date": "7월 30일",
+      "name": "커뮤니티 데이: 발챙이",
       "type": "Community Day",
-      "details": "Featured: Poliwag (발챙이)."
+      "details": "주인공: 발챙이."
     },
     {
       "year": 2023,
-      "date": "Aug 4-6",
-      "name": "GO Fest 2023: London & Osaka",
+      "date": "8월 4-6일",
+      "name": "GO Fest 2023: 런던 & 오사카",
       "type": "Go Fest",
-      "details": "Diancie & Mega Rayquaza debut."
+      "details": "디안시 & 메가레쿠쟈 최초 등장."
     },
     {
       "year": 2023,
-      "date": "Aug 13",
-      "name": "Community Day: Froakie",
+      "date": "8월 13일",
+      "name": "커뮤니티 데이: 개구마르",
       "type": "Community Day",
-      "details": "Featured: Froakie (개구마르)."
+      "details": "주인공: 개구마르."
     },
     {
       "year": 2023,
-      "date": "Aug 18-20",
-      "name": "GO Fest 2023: New York City",
+      "date": "8월 18-20일",
+      "name": "GO Fest 2023: 뉴욕",
       "type": "Go Fest",
-      "details": "Third in-person Go Fest city."
+      "details": "세 번째 현장 Go Fest 도시."
     },
     {
       "year": 2023,
-      "date": "Aug 26-27",
-      "name": "GO Fest 2023: Global",
+      "date": "8월 26-27일",
+      "name": "GO Fest 2023: 글로벌",
       "type": "Go Fest",
-      "details": "Global event with Diancie access."
+      "details": "디안시 접근 가능한 글로벌 이벤트."
     },
     {
       "year": 2023,
-      "date": "Sep 2",
-      "name": "Community Day Classic: Charmander",
+      "date": "9월 2일",
+      "name": "커뮤니티 데이 클래식: 파이리",
       "type": "Community Day Classic",
-      "details": "Featured: Charmander (파이리). Classic rerun."
+      "details": "주인공: 파이리. 클래식 재진행."
     },
     {
       "year": 2023,
-      "date": "Sep 23",
-      "name": "Community Day: Grubbin",
+      "date": "9월 23일",
+      "name": "커뮤니티 데이: 턱지충이",
       "type": "Community Day",
-      "details": "Featured: Grubbin (턱지충이)."
+      "details": "주인공: 턱지충이."
     },
     {
       "year": 2023,
-      "date": "Oct 7-8",
-      "name": "City Safari: Seoul",
+      "date": "10월 7-8일",
+      "name": "시티 사파리: 서울",
       "type": "City Safari",
-      "details": "Skiddo debut. Locations: Insadong, Namsan Tower, Hyundai Outlet."
+      "details": "메이클 최초 등장. 장소: 인사동, 남산타워, 현대아울렛."
     },
     {
       "year": 2023,
-      "date": "Oct 13-14",
-      "name": "City Safari: Barcelona",
+      "date": "10월 13-14일",
+      "name": "시티 사파리: 바르셀로나",
       "type": "City Safari",
-      "details": "City Safari in Spain."
+      "details": "스페인 시티 사파리."
     },
     {
       "year": 2023,
-      "date": "Oct 15",
-      "name": "Community Day: Timburr",
+      "date": "10월 15일",
+      "name": "커뮤니티 데이: 으랏차",
       "type": "Community Day",
-      "details": "Featured: Timburr (으랏차)."
+      "details": "주인공: 으랏차."
     },
     {
       "year": 2023,
-      "date": "Nov 4-5",
-      "name": "City Safari: Mexico City",
+      "date": "11월 4-5일",
+      "name": "시티 사파리: 멕시코시티",
       "type": "City Safari",
-      "details": "City Safari in Mexico."
+      "details": "멕시코 시티 사파리."
     },
     {
       "year": 2023,
-      "date": "Nov 5",
-      "name": "Community Day: Wooper/Paldean Wooper",
+      "date": "11월 5일",
+      "name": "커뮤니티 데이: 우파/팔데아우파",
       "type": "Community Day",
-      "details": "Featured: Wooper & Paldean Wooper (우파/팔데아우파)."
+      "details": "주인공: 우파 & 팔데아우파."
     },
     {
       "year": 2023,
-      "date": "Nov 25",
-      "name": "Community Day Classic: Mareep",
+      "date": "11월 25일",
+      "name": "커뮤니티 데이 클래식: 메리프",
       "type": "Community Day Classic",
-      "details": "Featured: Mareep (메리프). Classic rerun."
+      "details": "주인공: 메리프. 클래식 재진행."
     },
     {
       "year": 2024,
-      "date": "Jan 6",
-      "name": "Community Day: Rowlet",
+      "date": "1월 6일",
+      "name": "커뮤니티 데이: 나몰빼미",
       "type": "Community Day",
-      "details": "Featured: Rowlet (나몰빼미)."
+      "details": "주인공: 나몰빼미."
     },
     {
       "year": 2024,
-      "date": "Jan 20",
-      "name": "Community Day Classic: Porygon",
+      "date": "1월 20일",
+      "name": "커뮤니티 데이 클래식: 폴리곤",
       "type": "Community Day Classic",
-      "details": "Featured: Porygon (폴리곤). Classic rerun."
+      "details": "주인공: 폴리곤. 클래식 재진행."
     },
     {
       "year": 2024,
-      "date": "Feb 4",
-      "name": "Community Day: Chansey",
+      "date": "2월 4일",
+      "name": "커뮤니티 데이: 럭키",
       "type": "Community Day",
-      "details": "Featured: Chansey (럭키)."
+      "details": "주인공: 럭키."
     },
     {
       "year": 2024,
-      "date": "Feb 17-18",
-      "name": "GO Tour: Sinnoh - Los Angeles",
+      "date": "2월 17-18일",
+      "name": "GO Tour: 신오지방 - 로스앤젤레스",
       "type": "Go Tour",
-      "details": "In-person at Rose Bowl Stadium. Origin Forme Dialga & Palkia debut."
+      "details": "로즈 볼 스타디움 현장. 오리진 디아루가 & 오리진 펄기아 최초 등장."
     },
     {
       "year": 2024,
-      "date": "Feb 24-25",
-      "name": "GO Tour: Sinnoh - Global",
+      "date": "2월 24-25일",
+      "name": "GO Tour: 신오지방 - 글로벌",
       "type": "Go Tour",
-      "details": "Global Sinnoh Tour with Diamond/Pearl version choice."
+      "details": "글로벌 신오 투어. 다이아몬드/펄 버전 선택."
     },
     {
       "year": 2024,
-      "date": "Mar 9-10",
-      "name": "City Safari: Tainan",
+      "date": "3월 9-10일",
+      "name": "시티 사파리: 타이난",
       "type": "City Safari",
-      "details": "City Safari in Taiwan."
+      "details": "대만 시티 사파리."
     },
     {
       "year": 2024,
-      "date": "Mar 16",
-      "name": "Community Day: Litten",
+      "date": "3월 16일",
+      "name": "커뮤니티 데이: 냐오불",
       "type": "Community Day",
-      "details": "Featured: Litten (냐오불)."
+      "details": "주인공: 냐오불."
     },
     {
       "year": 2024,
-      "date": "Apr 7",
-      "name": "Community Day Classic: Bagon",
+      "date": "4월 7일",
+      "name": "커뮤니티 데이 클래식: 아공이",
       "type": "Community Day Classic",
-      "details": "Featured: Bagon (아공이). Classic rerun."
+      "details": "주인공: 아공이. 클래식 재진행."
     },
     {
       "year": 2024,
-      "date": "Apr 20",
-      "name": "Community Day: Bellsprout",
+      "date": "4월 20일",
+      "name": "커뮤니티 데이: 모다피",
       "type": "Community Day",
-      "details": "Featured: Bellsprout (모다피)."
+      "details": "주인공: 모다피."
     },
     {
       "year": 2024,
-      "date": "May 19",
-      "name": "Community Day: Bounsweet",
+      "date": "5월 19일",
+      "name": "커뮤니티 데이: 달콤아",
       "type": "Community Day",
-      "details": "Featured: Bounsweet (달콤아)."
+      "details": "주인공: 달콤아."
     },
     {
       "year": 2024,
-      "date": "May 30 - Jun 2",
-      "name": "GO Fest 2024: Sendai",
+      "date": "5월 30일 - 6월 2일",
+      "name": "GO Fest 2024: 센다이",
       "type": "Go Fest",
-      "details": "Marshadow & Necrozma debut. Shiny Emolga debut."
+      "details": "마샤도 & 네크로즈마 최초 등장. 이로치 에몽가 최초 등장."
     },
     {
       "year": 2024,
-      "date": "Jun 9",
-      "name": "Community Day: Goomy",
+      "date": "6월 9일",
+      "name": "커뮤니티 데이: 미끄메라",
       "type": "Community Day",
-      "details": "Featured: Goomy (미끄메라)."
+      "details": "주인공: 미끄메라."
     },
     {
       "year": 2024,
-      "date": "Jun 14-16",
-      "name": "GO Fest 2024: Madrid",
+      "date": "6월 14-16일",
+      "name": "GO Fest 2024: 마드리드",
       "type": "Go Fest",
-      "details": "Marshadow available. Shiny Crabrawler debut."
+      "details": "마샤도 등장. 이로치 무스력 최초 등장."
     },
     {
       "year": 2024,
-      "date": "Jun 22",
-      "name": "Community Day Classic: Cyndaquil",
+      "date": "6월 22일",
+      "name": "커뮤니티 데이 클래식: 브케인",
       "type": "Community Day Classic",
-      "details": "Featured: Cyndaquil (브케인). Classic rerun."
+      "details": "주인공: 브케인. 클래식 재진행."
     },
     {
       "year": 2024,
-      "date": "Jul 5-7",
-      "name": "GO Fest 2024: New York City",
+      "date": "7월 5-7일",
+      "name": "GO Fest 2024: 뉴욕",
       "type": "Go Fest",
-      "details": "Marshadow available. Shiny Ducklett debut."
+      "details": "마샤도 등장. 이로치 꼬지보리 최초 등장."
     },
     {
       "year": 2024,
-      "date": "Jul 13-14",
-      "name": "GO Fest 2024: Global",
+      "date": "7월 13-14일",
+      "name": "GO Fest 2024: 글로벌",
       "type": "Go Fest",
-      "details": "Marshadow global debut. Necrozma raids. 4 habitat rotations."
+      "details": "마샤도 글로벌 최초 등장. 네크로즈마 레이드. 4개 서식지 로테이션."
     },
     {
       "year": 2024,
-      "date": "Jul 21",
-      "name": "Community Day: Tynamo",
+      "date": "7월 21일",
+      "name": "커뮤니티 데이: 저리어",
       "type": "Community Day",
-      "details": "Featured: Tynamo (저리어). Exclusive move: Volt Switch."
+      "details": "주인공: 저리어. 전용기술: 볼트체인지."
     },
     {
       "year": 2024,
-      "date": "Aug 18",
-      "name": "Community Day Classic: Beldum",
+      "date": "8월 18일",
+      "name": "커뮤니티 데이 클래식: 메탕",
       "type": "Community Day Classic",
-      "details": "Featured: Beldum (메탕). Classic rerun."
+      "details": "주인공: 메탕. 클래식 재진행."
     },
     {
       "year": 2024,
-      "date": "Aug 31",
-      "name": "Community Day: Popplio",
+      "date": "8월 31일",
+      "name": "커뮤니티 데이: 누리공",
       "type": "Community Day",
-      "details": "Featured: Popplio (누리공)."
+      "details": "주인공: 누리공."
     },
     {
       "year": 2024,
-      "date": "Sep 14",
-      "name": "Community Day: Ponyta/Galarian Ponyta",
+      "date": "9월 14일",
+      "name": "커뮤니티 데이: 포니타/가라르포니타",
       "type": "Community Day",
-      "details": "Featured: Ponyta & Galarian Ponyta (포니타/가라르포니타)."
+      "details": "주인공: 포니타 & 가라르포니타."
     },
     {
       "year": 2024,
-      "date": "Sep 21-22",
-      "name": "City Safari: Jakarta",
+      "date": "9월 21-22일",
+      "name": "시티 사파리: 자카르타",
       "type": "City Safari",
-      "details": "City Safari in Indonesia."
+      "details": "인도네시아 시티 사파리."
     },
     {
       "year": 2024,
-      "date": "Sep 27-29",
-      "name": "Safari Zone: Incheon",
+      "date": "9월 27-29일",
+      "name": "사파리존: 인천",
       "type": "Safari Zone",
-      "details": "Songdo Central Park. Safari Hat Pikachu, Maractus."
+      "details": "송도 센트럴파크. 사파리 모자 피카츄, 마라카치."
     },
     {
       "year": 2024,
-      "date": "Oct 5",
-      "name": "Community Day: Sewaddle",
+      "date": "10월 5일",
+      "name": "커뮤니티 데이: 두르보",
       "type": "Community Day",
-      "details": "Featured: Sewaddle (두르보)."
+      "details": "주인공: 두르보."
     },
     {
       "year": 2024,
-      "date": "Nov 10",
-      "name": "Community Day: Mankey",
+      "date": "11월 10일",
+      "name": "커뮤니티 데이: 망키",
       "type": "Community Day",
-      "details": "Featured: Mankey (망키)."
+      "details": "주인공: 망키."
     },
     {
       "year": 2024,
-      "date": "Nov 16-17",
-      "name": "GO Wild Area: Fukuoka",
+      "date": "11월 16-17일",
+      "name": "GO 와일드 에어리어: 후쿠오카",
       "type": "Wild Area",
-      "details": "Maizuru Park. Idol/Rock Star Pikachu, Stud Snorlax."
+      "details": "마이즈루 공원. 아이돌/록스타 피카츄, 장인 잠만보."
     },
     {
       "year": 2024,
-      "date": "Nov 23-24",
-      "name": "GO Wild Area: Global",
+      "date": "11월 23-24일",
+      "name": "GO 와일드 에어리어: 글로벌",
       "type": "Wild Area",
-      "details": "Global Wild Area event."
+      "details": "글로벌 와일드 에어리어 이벤트."
     },
     {
       "year": 2024,
-      "date": "Dec 7-8",
-      "name": "City Safari: Hong Kong",
+      "date": "12월 7-8일",
+      "name": "시티 사파리: 홍콩",
       "type": "City Safari",
-      "details": "City Safari in Hong Kong."
+      "details": "홍콩 시티 사파리."
     },
     {
       "year": 2024,
-      "date": "Dec 7-8",
-      "name": "City Safari: São Paulo",
+      "date": "12월 7-8일",
+      "name": "시티 사파리: 상파울루",
       "type": "City Safari",
-      "details": "City Safari in Brazil."
+      "details": "브라질 시티 사파리."
     },
     {
       "year": 2024,
-      "date": "Dec 21-22",
-      "name": "December Community Day 2024",
+      "date": "12월 21-22일",
+      "name": "12월 커뮤니티 데이 2024",
       "type": "Community Day",
-      "details": "Recap of all 2023-2024 Community Day Pokémon."
+      "details": "2023-2024년 커뮤니티 데이 포켓몬 총정리."
     },
     {
       "year": 2025,
-      "date": "Jan 5",
-      "name": "Community Day: Sprigatito",
+      "date": "1월 5일",
+      "name": "커뮤니티 데이: 나오하",
       "type": "Community Day",
-      "details": "Featured: Sprigatito (나오하). Exclusive move: Frenzy Plant."
+      "details": "주인공: 나오하. 전용기술: 하드플랜트."
     },
     {
       "year": 2025,
-      "date": "Jan 25",
-      "name": "Community Day Classic: Ralts",
+      "date": "1월 25일",
+      "name": "커뮤니티 데이 클래식: 랄토스",
       "type": "Community Day Classic",
-      "details": "Featured: Ralts (랄토스). Exclusive move: Synchronoise."
+      "details": "주인공: 랄토스. 전용기술: 싱크로노이즈."
     },
     {
       "year": 2025,
-      "date": "Feb 9",
-      "name": "Community Day: Karrablast & Shelmet",
+      "date": "2월 9일",
+      "name": "커뮤니티 데이: 딱정곤 & 쪼마리",
       "type": "Community Day",
-      "details": "Featured: Karrablast (딱정곤) & Shelmet (쪼마리). Razor Shell / Energy Ball."
+      "details": "주인공: 딱정곤 & 쪼마리. 셸블레이드 / 에너지볼."
     },
     {
       "year": 2025,
-      "date": "Feb 21-23",
-      "name": "GO Tour: Unova - Los Angeles & New Taipei City",
+      "date": "2월 21-23일",
+      "name": "GO Tour: 하나지방 - 로스앤젤레스 & 신베이",
       "type": "Go Tour",
-      "details": "In-person events in two cities. Black/White version choice."
+      "details": "두 도시 현장 이벤트. 블랙/화이트 버전 선택."
     },
     {
       "year": 2025,
-      "date": "Mar 1-2",
-      "name": "GO Tour: Unova - Global",
+      "date": "3월 1-2일",
+      "name": "GO Tour: 하나지방 - 글로벌",
       "type": "Go Tour",
-      "details": "Global Unova Tour."
+      "details": "글로벌 하나 투어."
     },
     {
       "year": 2025,
-      "date": "Mar 8",
-      "name": "Community Day: Fuecoco",
+      "date": "3월 8일",
+      "name": "커뮤니티 데이: 뜨아거",
       "type": "Community Day",
-      "details": "Featured: Fuecoco (뜨아거). Exclusive move: Blast Burn."
+      "details": "주인공: 뜨아거. 전용기술: 블라스트번."
     },
     {
       "year": 2025,
-      "date": "Mar 22",
-      "name": "Community Day Classic: Totodile",
+      "date": "3월 22일",
+      "name": "커뮤니티 데이 클래식: 리아코",
       "type": "Community Day Classic",
-      "details": "Featured: Totodile (리아코). Exclusive move: Hydro Cannon."
+      "details": "주인공: 리아코. 전용기술: 하이드로캐논."
     },
     {
       "year": 2025,
-      "date": "Mar 29-30",
-      "name": "City Safari: Singapore, Mumbai, Milan, Santiago",
+      "date": "3월 29-30일",
+      "name": "시티 사파리: 싱가포르, 뭄바이, 밀라노, 산티아고",
       "type": "City Safari",
-      "details": "Simultaneous City Safari events in 4 cities."
+      "details": "4개 도시 동시 시티 사파리 이벤트."
     },
     {
       "year": 2025,
-      "date": "Apr 27",
-      "name": "Community Day: Vanillite",
+      "date": "4월 27일",
+      "name": "커뮤니티 데이: 바닐프티",
       "type": "Community Day",
-      "details": "Featured: Vanillite (바닐프티). Exclusive move: Avalanche."
+      "details": "주인공: 바닐프티. 전용기술: 눈사태."
     },
     {
       "year": 2025,
-      "date": "May 11",
-      "name": "Community Day: Pawmi",
+      "date": "5월 11일",
+      "name": "커뮤니티 데이: 빠모",
       "type": "Community Day",
-      "details": "Featured: Pawmi (빠모). Exclusive move: Brick Break."
+      "details": "주인공: 빠모. 전용기술: 깨트리기."
     },
     {
       "year": 2025,
-      "date": "May 24",
-      "name": "Community Day Classic: Machop",
+      "date": "5월 24일",
+      "name": "커뮤니티 데이 클래식: 알통몬",
       "type": "Community Day Classic",
-      "details": "Featured: Machop (알통몬). Exclusive move: Payback."
+      "details": "주인공: 알통몬. 전용기술: 보복."
     },
     {
       "year": 2025,
-      "date": "May 29 - Jun 1",
-      "name": "GO Fest 2025: Osaka",
+      "date": "5월 29일 - 6월 1일",
+      "name": "GO Fest 2025: 오사카",
       "type": "Go Fest",
-      "details": "Volcanion debut. Expo '70 Commemorative Park."
+      "details": "볼케니온 최초 등장. 엑스포 '70 기념공원."
     },
     {
       "year": 2025,
-      "date": "Jun 6-8",
-      "name": "GO Fest 2025: Jersey City",
+      "date": "6월 6-8일",
+      "name": "GO Fest 2025: 저지시티",
       "type": "Go Fest",
-      "details": "Volcanion available. Liberty State Park."
+      "details": "볼케니온 등장. 리버티 스테이트 파크."
     },
     {
       "year": 2025,
-      "date": "Jun 13-15",
-      "name": "GO Fest 2025: Paris",
+      "date": "6월 13-15일",
+      "name": "GO Fest 2025: 파리",
       "type": "Go Fest",
-      "details": "Volcanion available. Parc de Sceaux."
+      "details": "볼케니온 등장. 파르크 드 소."
     },
     {
       "year": 2025,
-      "date": "Jun 21",
-      "name": "Community Day: Jangmo-o",
+      "date": "6월 21일",
+      "name": "커뮤니티 데이: 짜랑꼬",
       "type": "Community Day",
-      "details": "Featured: Jangmo-o (짜랑꼬)."
+      "details": "주인공: 짜랑꼬."
     },
     {
       "year": 2025,
-      "date": "Jun 28-29",
-      "name": "GO Fest 2025: Global",
+      "date": "6월 28-29일",
+      "name": "GO Fest 2025: 글로벌",
       "type": "Go Fest",
-      "details": "Volcanion global debut."
+      "details": "볼케니온 글로벌 최초 등장."
     },
     {
       "year": 2025,
-      "date": "Jul 5-6",
-      "name": "Community Day Classic: Eevee",
+      "date": "7월 5-6일",
+      "name": "커뮤니티 데이 클래식: 이브이",
       "type": "Community Day Classic",
-      "details": "Featured: Eevee (이브이). Two-day Classic event."
+      "details": "주인공: 이브이. 2일간 클래식 이벤트."
     },
     {
       "year": 2025,
-      "date": "Jul 20",
-      "name": "Community Day: Quaxly",
+      "date": "7월 20일",
+      "name": "커뮤니티 데이: 꾸왁스",
       "type": "Community Day",
-      "details": "Featured: Quaxly. Paldea water starter."
+      "details": "주인공: 꾸왁스. 팔데아 물 스타터."
     },
     {
       "year": 2025,
-      "date": "Aug 23-24",
-      "name": "GO Fest 2025: Max Finale",
+      "date": "8월 23-24일",
+      "name": "GO Fest 2025: 맥스 피날레",
       "type": "Go Fest",
-      "details": "Max Finale closing event."
+      "details": "맥스 피날레 마감 이벤트."
     },
     {
       "year": 2025,
-      "date": "Aug 30",
-      "name": "Community Day: Rookidee",
+      "date": "8월 30일",
+      "name": "커뮤니티 데이: 가보리",
       "type": "Community Day",
-      "details": "Featured: Rookidee. Galar bird Pokémon."
+      "details": "주인공: 가보리. 가라르 새 포켓몬."
     },
     {
       "year": 2025,
-      "date": "Sep 14",
-      "name": "Community Day: Flabébé",
+      "date": "9월 14일",
+      "name": "커뮤니티 데이: 플라베베",
       "type": "Community Day",
-      "details": "Featured: Flabébé. Kalos fairy Pokémon."
+      "details": "주인공: 플라베베. 칼로스 페어리 포켓몬."
     },
     {
       "year": 2025,
-      "date": "Sep 27-28",
-      "name": "City Safari: Bangkok, Amsterdam, Valencia, Cancún, Vancouver",
+      "date": "9월 27-28일",
+      "name": "시티 사파리: 방콕, 암스테르담, 발렌시아, 칸쿤, 밴쿠버",
       "type": "City Safari",
-      "details": "Simultaneous City Safari events in 5 cities."
+      "details": "5개 도시 동시 시티 사파리 이벤트."
     },
     {
       "year": 2025,
-      "date": "Oct 12",
-      "name": "Community Day: Solosis",
+      "date": "10월 12일",
+      "name": "커뮤니티 데이: 유니란",
       "type": "Community Day",
-      "details": "Featured: Solosis. Unova psychic Pokémon."
+      "details": "주인공: 유니란. 하나지방 에스퍼 포켓몬."
     },
     {
       "year": 2025,
-      "date": "Nov 30",
-      "name": "Community Day: Pikipek",
+      "date": "11월 30일",
+      "name": "커뮤니티 데이: 콕코구리",
       "type": "Community Day",
-      "details": "Featured: Pikipek. Alola woodpecker Pokémon."
+      "details": "주인공: 콕코구리. 알로라 딱따구리 포켓몬."
     },
     {
       "year": 2025,
-      "date": "Dec 6-7",
-      "name": "December Community Day 2025",
+      "date": "12월 6-7일",
+      "name": "12월 커뮤니티 데이 2025",
       "type": "Community Day",
-      "details": "Recap of all 2025 Community Day Pokémon. 2:00-5:00 PM local time."
+      "details": "2025년 커뮤니티 데이 포켓몬 총정리. 오후 2:00-5:00 현지시간."
     },
     {
       "year": 2025,
-      "date": "Dec 13-14",
-      "name": "City Safari: Sydney, Buenos Aires, Miami",
+      "date": "12월 13-14일",
+      "name": "시티 사파리: 시드니, 부에노스아이레스, 마이애미",
       "type": "City Safari",
-      "details": "Simultaneous City Safari events in 3 cities."
+      "details": "3개 도시 동시 시티 사파리 이벤트."
     },
     {
       "year": 2026,
-      "date": "Jan 4",
-      "name": "Community Day Classic: Piplup",
+      "date": "1월 4일",
+      "name": "커뮤니티 데이 클래식: 팽도리",
       "type": "Community Day Classic",
-      "details": "Featured: Piplup (팽도리). Classic rerun."
+      "details": "주인공: 팽도리. 클래식 재진행."
     },
     {
       "year": 2026,
-      "date": "Jan 18",
-      "name": "Community Day: Grookey",
+      "date": "1월 18일",
+      "name": "커뮤니티 데이: 흥나숭",
       "type": "Community Day",
-      "details": "Featured: Grookey. Galar grass starter."
+      "details": "주인공: 흥나숭. 가라르 풀 스타터."
     },
     {
       "year": 2026,
-      "date": "Feb 1",
-      "name": "Community Day: Vulpix & Alolan Vulpix",
+      "date": "2월 1일",
+      "name": "커뮤니티 데이: 식스테일 & 알로라식스테일",
       "type": "Community Day",
-      "details": "Featured: Vulpix & Alolan Vulpix. Dual-form Community Day."
+      "details": "주인공: 식스테일 & 알로라식스테일. 듀얼 폼 커뮤니티 데이."
     },
     {
       "year": 2026,
-      "date": "Feb 20-22",
-      "name": "GO Tour: Kalos - Los Angeles & Tainan",
+      "date": "2월 20-22일",
+      "name": "GO Tour: 칼로스지방 - 로스앤젤레스 & 타이난",
       "type": "Go Tour",
-      "details": "In-person events in two cities. Pokémon 30th / GO 10th Anniversary."
+      "details": "두 도시 현장 이벤트. 포켓몬 30주년 / GO 10주년."
     },
     {
       "year": 2026,
-      "date": "Feb 23-27",
-      "name": "Road to Kalos",
+      "date": "2월 23-27일",
+      "name": "로드 투 칼로스",
       "type": "Other",
-      "details": "Lead-up event revisiting Kanto, Johto, Hoenn, Sinnoh, and Unova regions."
+      "details": "관동, 성도, 호연, 신오, 하나 지방을 복습하는 선행 이벤트."
     },
     {
       "year": 2026,
-      "date": "Feb 28 - Mar 1",
-      "name": "GO Tour: Kalos - Global",
+      "date": "2월 28일 - 3월 1일",
+      "name": "GO Tour: 칼로스지방 - 글로벌",
       "type": "Go Tour",
-      "details": "Global Kalos Tour event."
+      "details": "글로벌 칼로스 투어 이벤트."
     },
     {
       "year": 2026,
-      "date": "Mar 14",
-      "name": "Community Day: Scorbunny",
+      "date": "3월 14일",
+      "name": "커뮤니티 데이: 염버니",
       "type": "Community Day",
-      "details": "Featured: Scorbunny. Galar fire starter."
+      "details": "주인공: 염버니. 가라르 불 스타터."
     },
     {
       "year": 2026,
-      "date": "Mar 16-22",
-      "name": "Night Treats",
+      "date": "3월 16-22일",
+      "name": "나이트 트리트",
       "type": "Other",
-      "details": "Dessert-themed event. Cherubi, Vanillite, Swirlix, Pumpkaboo, Applin. Cake Hat Pikachu debut."
+      "details": "디저트 테마 이벤트. 체리버, 바닐프티, 페로꼬, 호바귀, 과Otherwise. 케이크 모자 피카츄 최초 등장."
     },
     {
       "year": 2026,
-      "date": "Mar 17-23",
-      "name": "Bug Out 2026",
+      "date": "3월 17-23일",
+      "name": "벌레 대발생 2026",
       "type": "Other",
-      "details": "Blipbug, Dottler, Orbeetle debut. Boosted Bug-type spawns."
+      "details": "두루지벌레, 레돔벌레, 이올브 최초 등장. 벌레타입 스폰 강화."
     },
     {
       "year": 2026,
-      "date": "May 29 - Jun 1",
-      "name": "GO Fest 2026: Tokyo",
+      "date": "5월 29일 - 6월 1일",
+      "name": "GO Fest 2026: 도쿄",
       "type": "Go Fest",
-      "details": "10th Anniversary Go Fest. Citywide gameplay from May 25."
+      "details": "10주년 Go Fest. 5월 25일부터 시티와이드 게임플레이."
     },
     {
       "year": 2026,
-      "date": "Jun 5-7",
-      "name": "GO Fest 2026: Chicago",
+      "date": "6월 5-7일",
+      "name": "GO Fest 2026: 시카고",
       "type": "Go Fest",
-      "details": "10th Anniversary at Grant Park. Return to original Go Fest location."
+      "details": "10주년 그랜트 파크. 최초 Go Fest 장소로 복귀."
     },
     {
       "year": 2026,
-      "date": "Jun 12-14",
-      "name": "GO Fest 2026: Copenhagen",
+      "date": "6월 12-14일",
+      "name": "GO Fest 2026: 코펜하겐",
       "type": "Go Fest",
-      "details": "10th Anniversary at Fælledparken."
+      "details": "10주년 펠레드파르켄."
     },
     {
       "year": 2026,
-      "date": "Jul 11-12",
-      "name": "GO Fest 2026: Global",
+      "date": "7월 11-12일",
+      "name": "GO Fest 2026: 글로벌",
       "type": "Go Fest",
-      "details": "10th Anniversary Global event. Almost all previously released Pokémon expected."
+      "details": "10주년 글로벌 이벤트. 기존 출시된 거의 모든 포켓몬 등장 예정."
     }
   ]
 }
